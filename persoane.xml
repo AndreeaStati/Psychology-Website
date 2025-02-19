@@ -12,4 +12,19 @@
             <tara>Romania</tara>
         </adresa>
     </persoana>
+
+    <persoana id="2">
+        <nume>Ionescu</nume>
+        <prenume>Andrei</prenume>
+        <varsta>35</varsta>
+        <adresa> 
+            <strada>Bulevardul Mihai Eminescu</strada>
+            <numar>19</numar>
+            <localitate>Targu Neamt</localitate>
+            <judet>Neamt</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <telefon>0742123456</telefon>
+    </persoana>
+
 </persoane>
