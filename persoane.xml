@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE persoane SYSTEM "persoane.dtd">
 <persoane>
     <persoana id="1">
         <nume>Popescu</nume>
@@ -11,6 +12,12 @@
             <judet>Iasi</judet>
             <tara>Romania</tara>
         </adresa>
+        <telefon>0751789456</telefon>
+        <studii>
+            <universitate>Universitatea Alexandru Ioan Cuza</universitate>
+            <facultate>Facultatea de Drept</facultate>
+            <oras>Iasi</oras>
+        </studii>
     </persoana>
 
     <persoana id="2">
@@ -25,6 +32,11 @@
             <tara>Romania</tara>
         </adresa>
         <telefon>0742123456</telefon>
+        <studii>
+            <universitate>Universitatea Tehnica Gheorghe Asachi</universitate>
+            <facultate>Facultatea de Automatica si Calculatoare</facultate>
+            <oras>Iasi</oras>
+        </studii>
     </persoana>
 
 </persoane>
