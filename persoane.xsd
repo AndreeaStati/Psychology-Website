@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="persoane">
+        <xs:complexType> 
+            <xs:sequence>
+
+                <xs:element name="persoana" type="persoanaType" maxOccurs="unbounded"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="persoanaType">
+        <xs:sequence>
+            <xs:element name="nume" type="xs:string" />
+            <xs:element name="prenume" type="xs:string" />
+            <xs:element name="varsta" type="xs:integer" />
+            <xs:element name="adresa" type="adresaType" />
+            <xs:element name="telefon" type="xs:string" />
+            <xs:element name="studii" type="studiiType" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:int" use="required" />
+    </xs:complexType>
+
+
+    <xs:complexType name="adresaType">
+        <xs:sequence>
+            <xs:element name="strada" type="xs:string" />
+            <xs:element name="numar" type="xs:integer" />
+            <xs:element name="localitate" type="xs:string" />
+            <xs:element name="judet" type="xs:string" />
+            <xs:element name="tara" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studiiType">
+        <xs:sequence>
+            <xs:element name="universitate" type="xs:string" />
+            <xs:element name="facultate" type="xs:string" />
+            <xs:element name="oras" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+ 
+ </xs:schema>
