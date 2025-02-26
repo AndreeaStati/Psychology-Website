@@ -33,6 +33,48 @@
         <p> <b>Observatie: </b> Pentru a pune un contur unui tabel se poate (dar nu se recomanda) sa se puna atributul <code>border="1"</code>.
             <br /> La validare va da eroarea: <code><i>The border attribute on the table element is obsolete.</i></code>
         </p>
+
+        <p>
+            Formularele se pot crea cu ajutorul tag-ului <code>form</code> care poate contine tag-urile: <code>input, textarea, label, select, option, button.</code>
+            <br />Pentru mai multe detalii consultati cursul sau tutorialul <a href="https://www.w3schools.com/html/html_forms.asp">HTML Forms and Inputs</a> de la adresa <a href="https://www.w3schools.com/html/html_forms.asp">https://www.w3schools.com/html/html_forms.asp</a>.
+            <br />
+        </p>
+        <p>
+            Un exemplu de formular este urmatorul:
+        </p>
+        <form>
+            <label for="fnume">Nume:</label>
+            <input type="text" id="fnume" name="fnume" value="nume"><br>
+
+            <label for="fprenume">Prenume:</label>
+            <input type="text" id="fprenume" name="fprenume" value="prenume"><br>
+
+            <label for="fparola">Parola:</label>
+            <input type="password" id="fparola" name="fparola" value="fparola"><br>
+
+            <label for="fculoarea">Culoarea preferata:</label>
+            <select id="fculoarea" name="fculoarea">
+                <option value="rosu">Rosu</option>
+                <option value="galben">Galben</option>
+                <option value="verde">verde</option>
+                <option value="albastru">albastru</option>
+            </select><br>
+
+            <label for="fdescriere">Descriere:</label>
+            <textarea>
+
+            </textarea><br>
+
+            <input type="checkbox" id="conditie" name="conditie">
+            <label for="conditie">Sunt de acord cu conditiile</label><br><br>
+            
+            <button type="submit">Inregistreaza</button><br>
+
+        </form>
+
+        
+
+
     </body>
-    
+
 </html>
