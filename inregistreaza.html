@@ -12,56 +12,55 @@
         </nav>
 
         <form>
+            <fieldset>
+                <legend>Informatii generale</legend>
+                <label for="fnume_utilizator">Nume utilizator:</label>
+                <input type="text" id="fnume_utilizator" name="fnume_utilizator"><br>
 
-            <label for="fnume">Nume:</label>
+                <label for="fparola">Parola:</label>
+                <input type="password" id="fparola" name="fparola" value="fparola"><br>
 
-            <input type="text" id="fnume" name="fnume" value="nume"><br>
+                <label for="fnume">Nume:</label>
+                <input type="text" id="fnume" name="fnume" value="nume"><br>
 
+                <label for="fprenume">Prenume:</label>
+                <input type="text" id="fprenume" name="fprenume" value="prenume"><br>
 
+                <label for="femail">Email</label>
+                <input type="text" id="femail" name="femail" value="@gmail.com"><br>
 
-            <label for="fprenume">Prenume:</label>
+                <label for="ftelefon">Telefon</label>
+                <input type="tel" id="ftelefon" name="ftelefon"><br>
 
-            <input type="text" id="fprenume" name="fprenume" value="prenume"><br>
+            </fieldset>
 
+            <fieldset>
+                <legend>Informatii personale</legend>
 
+                <label for="fsexul">Sexul:</label>
+                <select id="fsexul" name="fsexul">
+                    <option value="femeie">Femeie</option>
+                    <option value="barbat">Barbat</option>
+                </select><br>
 
-            <label for="fparola">Parola:</label>
+            
 
-            <input type="password" id="fparola" name="fparola" value="fparola"><br>
+                <label for="fculoarea">Culoarea preferata:</label>
+                <select id="fculoarea" name="fculoarea">
+                    <option value="rosu">Rosu</option>
+                    <option value="galben">Galben</option>
+                    <option value="verde">verde</option>
+                    <option value="albastru">albastru</option>
+                </select><br>
 
+                <label for="fdescriere">Descriere:</label>
+                <textarea id="fdescriere"></textarea><br>
 
+                <input type="checkbox" id="conditie" name="conditie">
+                <label for="conditie">Sunt de acord cu conditiile</label><br>
 
-            <label for="fculoarea">Culoarea preferata:</label>
-
-            <select id="fculoarea" name="fculoarea">
-
-                <option value="rosu">Rosu</option>
-
-                <option value="galben">Galben</option>
-
-                <option value="verde">verde</option>
-
-                <option value="albastru">albastru</option>
-
-            </select><br>
-
-
-
-            <label for="fdescriere">Descriere:</label>
-            <textarea id="fdescriere"></textarea><br>
-
-
-
-            <input type="checkbox" id="conditie" name="conditie">
-
-            <label for="conditie">Sunt de acord cu conditiile</label><br><br>
-
-
-
+            </fieldset>
             <button type="submit">Inregistreaza</button><br>
-
-
-
         </form>
     </body>
 </html>
