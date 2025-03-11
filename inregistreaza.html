@@ -9,7 +9,7 @@
             <a href="inregistreaza.html">INREGISTRARE</a> |
             <a href="video.html">VIDEO</a> |
             <a href="despre.html">DESPRE</a> 
-        </nav>
+        </nav><br>
 
         <form>
             <fieldset>
@@ -32,7 +32,7 @@
                 <label for="ftelefon">Telefon</label>
                 <input type="tel" id="ftelefon" name="ftelefon"><br>
 
-            </fieldset>
+            </fieldset><br>
 
             <fieldset>
                 <legend>Informatii personale</legend>
@@ -43,7 +43,13 @@
                     <option value="barbat">Barbat</option>
                 </select><br>
 
-            
+                <label for="fmancare">Mancarea preferata:</label>
+                <input list="fmancaruri" name="fmancare" id="fmancare" />
+                <datalist id="fmancaruri">
+                    <option value="Pizza"></option>
+                    <option value="Burger"></option>
+                    <option value="Sushi"></option>
+                </datalist><br>
 
                 <label for="fculoarea">Culoarea preferata:</label>
                 <select id="fculoarea" name="fculoarea">
@@ -53,14 +59,28 @@
                     <option value="albastru">albastru</option>
                 </select><br>
 
+                <label for="fdata_nasterii">Data nasterii</label>
+                <input type="date" id="fdata_nasterii" name="fdata_nasterii"><br>
+
+                <label for="fora_nasterii">Ora nasterii</label>
+                <input type="time" id="fora_nasterii" name="fora_nasterii"><br>
+
+
+                <label for="fvarsta">Varsta (10-80)</label>
+                <input type="range" id="fvarsta" name="fvarsta" min="10" max="80"><br>
+
+                <label for="fadresa_paginii">Adresa paginii personale: </label>
+                <input type="url" id="fadresa_paginii" name="fadresa_paginii"><br>
+
                 <label for="fdescriere">Descriere:</label>
                 <textarea id="fdescriere"></textarea><br>
 
-                <input type="checkbox" id="conditie" name="conditie">
-                <label for="conditie">Sunt de acord cu conditiile</label><br>
+            </fieldset><br>
+            <input type="checkbox" id="conditie" name="conditie">
+            <label for="conditie">Sunt de acord cu conditiile</label><br>
+            
+            <button type="submit" disabled>Inregistreaza</button><br>
 
-            </fieldset>
-            <button type="submit">Inregistreaza</button><br>
         </form>
     </body>
 </html>
