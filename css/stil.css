@@ -1,0 +1,62 @@
+header {
+    background-color: peachpuff;
+    padding: 15px;
+    border-color: black;
+    border: 2px solid;
+}
+nav {
+    color: darkslategray;
+    background-color:antiquewhite;
+    text-align: left;
+    padding: 15px;
+    border-color: darkslategrey;
+    border:2px solid;
+}
+
+nav a {
+    color:darkslategrey;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 5px;   
+}
+
+main {
+    display: flex;
+    background-color: peachpuff;
+    padding: 10px;
+    border-color: black;
+    border: 2px solid;
+    justify-content: space-between;
+}
+
+article {
+    background-color: gray;
+    border-color: black;
+    border: 2px solid;
+    padding: 10px;
+    flex: 2;
+    margin: 0px 5px;
+}
+
+section {
+    background-color: aquamarine;
+    border-color: navy;
+    border: 2px solid;
+    padding: 10px;
+}
+
+aside {
+    background-color:darkseagreen;
+    border-color: darkgreen;
+    border: 2px solid;
+    padding: 10px;
+    flex: 1;
+    margin: 0px 5px;
+}
+
+footer {
+    background-color:peachpuff;
+    border-color: black;
+    border: 2px solid;
+    padding: 10px;
+}
