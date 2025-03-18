@@ -1,62 +1,75 @@
-header {
-    background-color: peachpuff;
-    padding: 15px;
-    border-color: black;
-    border: 2px solid;
+body {
+    background-color: #FEFAE0;
+    padding: 10px 100px;
 }
-nav {
-    color: darkslategray;
-    background-color:antiquewhite;
-    text-align: left;
+
+header {
+    background-color:  #E2E0C8;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav { 
     padding: 15px;
-    border-color: darkslategrey;
-    border:2px solid;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;  /* Permite elementelor să se "wrapping" (se mute pe rânduri) dacă nu se încadrează într-un singur rând */
 }
 
 nav a {
-    color:darkslategrey;
+    background-color: #A8CABA;
+    color: darkslategrey;
     font-size: 20px;
     font-weight: bold;
-    padding: 5px 5px;   
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) { 
+    nav {
+        justify-content: center;
+        width: 100%; 
+    }
+    
+    nav a {
+        font-size: 17px; 
+        padding: 5px 8px; 
+    }
 }
 
 main {
     display: flex;
-    background-color: peachpuff;
+    background-color: #E2E0C8;
     padding: 10px;
-    border-color: black;
-    border: 2px solid;
     justify-content: space-between;
+    gap: 5px;
 }
 
 article {
-    background-color: gray;
-    border-color: black;
-    border: 2px solid;
+    background-color: #5F6F52;
     padding: 10px;
-    flex: 2;
-    margin: 0px 5px;
+    flex: 3;
+    margin: 10px;
 }
 
 section {
-    background-color: aquamarine;
-    border-color: navy;
-    border: 2px solid;
+    background-color: antiquewhite;
     padding: 10px;
 }
 
 aside {
-    background-color:darkseagreen;
-    border-color: darkgreen;
-    border: 2px solid;
+    background-color: #B99470;
     padding: 10px;
     flex: 1;
-    margin: 0px 5px;
+    margin: 10px;
 }
 
 footer {
-    background-color:peachpuff;
-    border-color: black;
-    border: 2px solid;
+    background-color:  #E2E0C8;
     padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
