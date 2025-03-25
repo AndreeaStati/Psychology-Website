@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1600px;
 }
 
 body {
     background-color: #FEFAE0;
-    padding: 10px 100px;
+    padding: 10px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
     width: 100%;
+    -ms-flex-align: center;
+    justify-content: space-between;
 }
 
 header {
@@ -66,7 +69,7 @@ main {
     background-color: #B99470;
     padding: 20px;
     border-radius: 10px;
-    width: 20%;
+    width: 23%;
     height: fit-content;
 }
 
@@ -107,7 +110,8 @@ section {
     background-color: antiquewhite;
     padding: 15px;
     border-radius: 5px;
-    white-space:pre;
+    height: 90vh;
+    /*white-space:pre;*/
 }
 
 footer {

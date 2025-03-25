@@ -7,7 +7,7 @@
         <script src="js/script.js"></script>
     </head>
     
-    <body onload="displayTimeLocation()">
+    <body onload="calledOnLoad()">
         <nav class="navbar">
             <a href="index.html">ACASA</a> 
             <a href="inregistreaza.html">INREGISTRARE</a>
@@ -36,8 +36,17 @@
                 </section>
 
                 <section id="section2">
-                    <h2>Sectiunea 2</h2>
-                    <p>Continut pentru sectiunea 2.</p>
+                    <h2>Sectiunea 2 - Desenarea unui dreptunghi</h2>
+                    
+                    <div class="controls">
+                        <label for="strokeColor">Culoare contur:</label>
+                        <input type="color" id="strokeColor" value="#000000"><br>
+                
+                        <label for="fillColor">Culoare umplere:</label>
+                        <input type="color" id="fillColor" value="#ff0000">
+                    </div>
+                
+                    <canvas id="drawCanvas" width="600" height="400"></canvas>
                 </section>
 
                 <section id="section3">
