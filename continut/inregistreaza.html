@@ -1,90 +1,124 @@
+<!-- 
+    <header> = introductory content (title, logo, author information)
+    <nav> = navigation bar, links
+    <main> = main content (section, aside, article, div)
+    <section> = dependent content
+    <aside> = side content (author information,  fun facts, external links)
+    <article> = independent content (news articles, blog posts)
+    <footer> = closing content (copyright, navigational links)
+-->
 <!DOCTYPE html>
 <html lang="ro-RO">
     <head>
         <meta charset="UTF-8">
-        <title>Inregistreaza</title>
-        <link rel="stylesheet" type="text/css" href="css/stil.css">
+        <title>Invat</title>
+        <link rel="stylesheet" type="text/css" href="css/stil2.css">
+        
     </head>
+
     <body>
-        <nav>
+        <div class="navbar">
+            <a href="#" id="logo"> <img src="imagini/logo.jpg"></a>
             <a href="index.html">ACASA</a> 
             <a href="inregistreaza.html">INREGISTRARE</a>
             <a href="video.html">VIDEO</a> 
             <a href="despre.html">DESPRE</a> 
             <a href="desen.html">DESEN</a>
             <a href="invat.html">INVAT</a>
-        </nav><br>
+        </div>
 
-        <form>
-            <fieldset>
-                <legend>Informatii generale</legend>
-                <label for="username">Nume utilizator:</label>
-                <input type="text" id="username" name="username"><br>
+        <header>
+            <div class="title">
+                <h1>Hello World</h1>
+            </div>
+            <div class="home_page_image">
+                <img src="imagini/psihologia_copilului.png" 
+                    alt="Psihologia copilului"
+                    class="img1"
+                    width="300"
+                    height="300">
+            </div>
+           
+        </header>
 
-                <label for="pass">Parola:</label>
-                <input type="password" id="pass" name="pass"><br>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Informatii generale</legend>
+                    <label for="username">Nume utilizator:</label>
+                    <input type="text" id="username" name="username"><br>
+    
+                    <label for="pass">Parola:</label>
+                    <input type="password" id="pass" name="pass"><br>
+    
+                    <label for="lastname">Nume:</label>
+                    <input type="text" id="lastname" name="lastname"><br>
+    
+                    <label for="firstname">Prenume:</label>
+                    <input type="text" id="firstname" name="firstname"><br>
+    
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email"><br>
+    
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone"><br>
+    
+                </fieldset><br>
+    
+                <fieldset>
+                    <legend>Informatii personale</legend>
+    
+                    <label for="gender">Sexul:</label>
+                    <select id="gender" name="gender">
+                        <option value="femeie">Femeie</option>
+                        <option value="barbat">Barbat</option>
+                    </select><br>
+    
+                    <label for="food">Mancarea preferata:</label>
+                    <input list="foods" id="food" name="food"  />
+                    <datalist id="foods">
+                        <option value="Pizza"></option>
+                        <option value="Burger"></option>
+                        <option value="Sushi"></option>
+                    </datalist><br>
+    
+                    <label for="color">Culoarea preferata:</label>
+                    <select id="color" name="color">
+                        <option value="rosu">Rosu</option>
+                        <option value="galben">Galben</option>
+                        <option value="verde">verde</option>
+                        <option value="albastru">albastru</option>
+                    </select><br>
+    
+                    <label for="birthdate">Data nasterii</label>
+                    <input type="date" id="birthdate" name="birthdate"><br>
+    
+                    <label for="birthtime">Ora nasterii</label>
+                    <input type="time" id="birthtime" name="birthtime"><br>
+    
+    
+                    <label for="age">Varsta (10-80)</label>
+                    <input type="range" id="age" name="age" min="10" max="80"><br>
+    
+                    <label for="homepage">Adresa paginii personale: </label>
+                    <input type="url" id="homepage" name="homepage"><br>
+    
+                    <label for="description">Descriere:</label>
+                    <textarea id="description"></textarea><br>
+    
+                </fieldset><br>
+                <input type="checkbox" id="condition" name="condition">
+                <label for="condition">Sunt de acord cu conditiile</label><br>
+                
+                <button type="submit" disabled>Inregistreaza</button><br>
+    
+            </form> 
+        </main>  
 
-                <label for="lastname">Nume:</label>
-                <input type="text" id="lastname" name="lastname"><br>
-
-                <label for="firstname">Prenume:</label>
-                <input type="text" id="firstname" name="firstname"><br>
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email"><br>
-
-                <label for="phone">Telefon</label>
-                <input type="tel" id="phone" name="phone"><br>
-
-            </fieldset><br>
-
-            <fieldset>
-                <legend>Informatii personale</legend>
-
-                <label for="gender">Sexul:</label>
-                <select id="gender" name="gender">
-                    <option value="femeie">Femeie</option>
-                    <option value="barbat">Barbat</option>
-                </select><br>
-
-                <label for="food">Mancarea preferata:</label>
-                <input list="foods" id="food" name="food"  />
-                <datalist id="foods">
-                    <option value="Pizza"></option>
-                    <option value="Burger"></option>
-                    <option value="Sushi"></option>
-                </datalist><br>
-
-                <label for="color">Culoarea preferata:</label>
-                <select id="color" name="color">
-                    <option value="rosu">Rosu</option>
-                    <option value="galben">Galben</option>
-                    <option value="verde">verde</option>
-                    <option value="albastru">albastru</option>
-                </select><br>
-
-                <label for="birthdate">Data nasterii</label>
-                <input type="date" id="birthdate" name="birthdate"><br>
-
-                <label for="birthtime">Ora nasterii</label>
-                <input type="time" id="birthtime" name="birthtime"><br>
-
-
-                <label for="age">Varsta (10-80)</label>
-                <input type="range" id="age" name="age" min="10" max="80"><br>
-
-                <label for="homepage">Adresa paginii personale: </label>
-                <input type="url" id="homepage" name="homepage"><br>
-
-                <label for="description">Descriere:</label>
-                <textarea id="description"></textarea><br>
-
-            </fieldset><br>
-            <input type="checkbox" id="condition" name="condition">
-            <label for="condition">Sunt de acord cu conditiile</label><br>
-            
-            <button type="submit" disabled>Inregistreaza</button><br>
-
-        </form>
+        <footer>
+            © copyright w3schools.com
+        </footer>
     </body>
+    
+
 </html>

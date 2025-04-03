@@ -1,42 +1,63 @@
+<!-- 
+    <header> = introductory content (title, logo, author information)
+    <nav> = navigation bar, links
+    <main> = main content (section, aside, article, div)
+    <section> = dependent content
+    <aside> = side content (author information,  fun facts, external links)
+    <article> = independent content (news articles, blog posts)
+    <footer> = closing content (copyright, navigational links)
+-->
 <!DOCTYPE html>
 <html lang="ro-RO">
     <head>
         <meta charset="UTF-8">
         <title>Invat</title>
-        <link rel="stylesheet" type="text/css" href="css/stil.css">
+        <link rel="stylesheet" type="text/css" href="css/stil2.css">
         <script src="js/script.js"></script>
     </head>
-    
+
     <body onload="calledOnLoad()">
-        <nav class="navbar">
+
+        <div class="navbar">
+            <a href="#" id="logo"> <img src="imagini/logo.jpg"></a>
             <a href="index.html">ACASA</a> 
             <a href="inregistreaza.html">INREGISTRARE</a>
             <a href="video.html">VIDEO</a> 
             <a href="despre.html">DESPRE</a> 
             <a href="desen.html">DESEN</a>
             <a href="invat.html">INVAT</a>
-        </nav><br><br>
-        
+        </div>
+
         <header>
-            <p>Invatare si Resurse</p>
-        </header><br>
+            <div class="title">
+                <h1>Hello World</h1>
+            </div>
+            <div class="home_page_image">
+                <img src="imagini/psihologia_copilului.png" 
+                    alt="Psihologia copilului"
+                    class="img1"
+                    width="300"
+                    height="300">
+            </div>
+           
+        </header>
 
         <main>
             <aside class="sidebar">
-                <h3>Meniu</h3>
-                <p><a href="#section1">Sectiunea 1</a></p>
-                <p><a href="#section2">Sectiunea 2</a></p>
-                <p><a href="#section3">Sectiunea 3</a></p>
+                <a href="#section1">Section 1</a>
+                <a href="#section2">Section 2</a>
+                <a href="#section3">Section 3</a>
             </aside>
-
-            <div class="content">
-                <section id="section1">
-                    <h2>Sectiunea 1</h2>
-                    <p>Continut pentru sectiunea 1.</p>
-                </section>
-
-                <section id="section2">
-                    <h2>Sectiunea 2 - Desenarea unui dreptunghi</h2>
+    
+            <div class="container">
+                <div class="center"> <!--center-->
+                    <div id="section1">
+                        <h2>Section 1</h2>
+                        <p> Text </p>
+                    </div>
+    
+                    <div id="section2">
+                        <h2>Sectiunea 2 - Desenarea unui dreptunghi</h2>
                     
                     <div class="controls">
                         <label for="strokeColor">Culoare contur:</label>
@@ -47,17 +68,25 @@
                     </div>
                 
                     <canvas id="drawCanvas" width="600" height="400"></canvas>
-                </section>
-
-                <section id="section3">
-                    <h2>Sectiunea 3</h2>
-                    <p>Continut pentru sectiunea 3.</p>
-                </section>
-            </div>
-        </main><br>
+                    </div>
+    
+                    <div id="section3">
+                        <h2>Section 3</h2>
+                        <p> Text </p>
+                    </div>
+                </div>
+    
+                <article> <!--right-->
+                    <h2>About</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                </article>
+            </div>  
+        </main>  
 
         <footer>
-            <p>Footer</p>
+            © copyright w3schools.com
         </footer>
     </body>
+    
+
 </html>
