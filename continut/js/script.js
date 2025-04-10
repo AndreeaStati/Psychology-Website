@@ -112,15 +112,28 @@ function setupCanvasDrawing() {
     });
 }
 
-function schimbaContinut(resursa) {
+function schimbaContinut(resursa, jsFisier, jsFunctie) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("continut").innerHTML = this.responseText;
-            console.log(resursa);
-            
+            document.getElementById("continut").innerHTML = this.responseText; 
+            if (jsFisier) {
+                let elementScript = document.createElement('script');
+                elementScript.onload = function() {
+                    console.log("hello");
+                    if (jsFunctie) {
+                        window[jsFunctie]();
+                    }
+                };
+                elementScript.src = jsFisier;
+                document.head.appendChild(elementScript);
+            } else {
+                if (jsFunctie){
+                    window[jsFunctie]();
+                }
+            }           
         }
     };
-    xhttp.open("GET", "continut/" + resursa + ".html", true);
+    xhttp.open("GET", resursa + ".html", true);
     xhttp.send();
 }

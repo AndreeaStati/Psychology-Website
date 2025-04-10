@@ -145,3 +145,32 @@ footer {
       
     }
 }
+
+.persoaneDiv1 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tabelPersoane {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabelPersoane td, #tabelPersoane th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tabelPersoane tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #tabelPersoane tr:hover {background-color: #ddd;}
+  
+  #tabelPersoane th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:  rgb(182, 146, 124);
+    color: white;
+  }
