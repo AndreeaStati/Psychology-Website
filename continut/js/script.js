@@ -42,7 +42,7 @@ function displayTimeLocation() {
 }
 
 function updateInfo(date, time, url, browserName, browserVersion, os, lat, long) {
-    let section1 = document.getElementById('section1');
+    let section1 = document.getElementById('browserInfo');
 
     let infoParagraph = document.getElementById('info');
     if (!infoParagraph) {
@@ -137,3 +137,13 @@ function schimbaContinut(resursa, jsFisier, jsFunctie) {
     xhttp.open("GET", resursa + ".html", true);
     xhttp.send();
 }
+
+
+function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("myContainer").style.marginLeft = "250px";
+}
+
+function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("myContainer").style.marginLeft= "0";  }

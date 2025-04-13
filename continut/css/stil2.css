@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
   }
 
 body{
@@ -9,7 +9,7 @@ body{
 header {
     padding: 15px;
     text-align: center;
-    background-color: #f5f4f0;
+    /*background-color: #f5f4f0;*/
     font-family: "Garamond", serif;
     display: flex;
     flex-wrap: wrap;
@@ -69,14 +69,20 @@ header {
     background-color: #958271;
 }
 
-aside {
+#continut {
+    border-radius: 30px;
+    background-color: white;
+    padding: 20px;
+}
+
+.sidebar {
     float: left;
     width: 15%;
     text-align: center;
     background-color: f5f4f0;
 }
   
-aside a {
+.sidebar a {
     background-color: #e5e5e5;
     padding: 8px;
     margin-top: 7px;
@@ -86,9 +92,64 @@ aside a {
     text-decoration: none;
 }
 
-aside a:hover {
+.sidebar a:hover {
     background-color: #3E4A3D;
     color: white;
+}
+/*
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f5f4f0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    background-color: #e5e5e5;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+    background-color: #3E4A3D;
+}
+
+.sidebar .closeButton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+.openButton {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openButton:hover{
+    background-color: #444;
+}
+
+*/
+#contentContainer {
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
 .container {
@@ -107,15 +168,39 @@ aside a:hover {
 
 #section1 {
     background-color: rgb(117, 130, 107);
-    padding: 10px;
+    padding: 20px;
+    color: white;
+    
 }
 #section2 {
-    background-color: rgb(250, 233, 220);
+    background-color: #f5f4f0;
     padding: 10px;
 }
 #section3 {
-    background-color: rgb(182, 146, 124);
+    background-image: linear-gradient(to left top, #c1b1a8, #b5a296, #a99384, #9d8573, #907762);
     padding: 10px;
+}
+
+#section3 h2 {
+    text-align: center;
+    color: white;
+    font-family: Garamond, serif;
+    font-size: 24px;
+}
+
+#formular {
+    background-color:#f5f4f0; 
+    padding: 40px;
+    text-align: justify;
+    vertical-align:middle;
+}
+
+.list1, .list2 {
+    background-color: #eae2db;
+    padding: 15px;
+    border: 2px;
+    border-radius: 40px;
+    
 }
 
 article {
@@ -131,8 +216,9 @@ footer {
     background-color: #74826b;
     text-align:center;
     padding:10px;
-    margin-top:7px;
+    /*margin-top:7px;*/
     color: white;
+    width: 100%;
 }
   
 @media only screen and (max-width: 620px) {
@@ -145,7 +231,12 @@ footer {
       
     }
 }
-
+/*
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+*/
 .persoaneDiv1 {
     width: 80%;
     margin-left: auto;
@@ -171,6 +262,6 @@ footer {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color:  rgb(182, 146, 124);
+    background-color: rgb(182, 146, 124);
     color: white;
   }

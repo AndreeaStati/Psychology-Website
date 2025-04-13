@@ -40,12 +40,10 @@ def handle_client(clientsocket):
         if resursa == "/":
              resursa = "/index.html"  # Servim index.html dacă nu se specifică nimic
 
-       
-        print("Resursa cerută:", resursa)
         cale_fisier = os.path.join(director_parinte, "continut", resursa[1:])
         print("director parinte: " + director_parinte)
-        print("resursa: " + resursa)
         print("cale: " + cale_fisier)
+        print("resursa: " + resursa)
 
         if os.path.isfile(cale_fisier):
             with open(cale_fisier, "rb") as fisier:
@@ -78,7 +76,6 @@ def handle_client(clientsocket):
                     with gzip.GzipFile(fileobj=buf, mode="wb") as f:
                         f.write(continut)
                     continut_comprimat = buf.getvalue()
-            print("cale: " + cale_fisier)
 
                 # Construim răspunsul HTTP corect
             raspuns = "HTTP/1.1 200 OK\r\n"
