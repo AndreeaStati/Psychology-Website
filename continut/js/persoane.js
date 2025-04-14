@@ -47,6 +47,6 @@ function myFunction(xml) {
   }
 
   console.log(persoane); // Verifică ce date sunt preluate
-  document.getElementById("paragraf").innerHTML = "";
-  document.getElementById("tabelPersoane").innerHTML = table;
+  document.getElementById("section9aParagraf").innerHTML = "";
+  document.getElementById("section9bTabelPersoane").innerHTML = table;
 }

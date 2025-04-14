@@ -4,24 +4,12 @@
 
 body {
     background-color: #f5f4f0;
-    font-family: 'Figtree';
+    font-family: 'ivypresto-display';
     letter-spacing: 0.3px;
     word-spacing: 1px;
 }
 
-.header {
-    padding: 15px;
-    text-align: center;
-    background-color: #f5f4f0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.title {
-    width: 50%;
-}
-
+/* ---------------------------------------------------------------------------------- navbar */
 .navbar {
     display: flex;
     flex-direction: row;
@@ -61,9 +49,43 @@ body {
     background-color: #958271;
 }
 
-.main {
-    gap:10px;
+/*---------------------------------------------------------------------------------- header*/
+#headerContinut {
+    /* background-color: rgb(117, 130, 107);*/
+    background-color: #f5f4f0;
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
 }
+
+#header1 {
+    vertical-align:middle;
+}
+
+#header1 h2 {
+    font-family: 'ivypresto-display';
+    font-size: 60px;
+    line-height: 76px;
+    font-weight: 100;
+}
+
+#header2 {
+    width: 50%;
+}
+
+#headerImg {
+    border-radius: 40px;
+}
+
+/*---------------------------------------------------------------------------------- main*/
+.main {
+    padding: 10px;
+}
+
+/*---------------------------------------------------------------- continut main sectiuni */
 .container {
     display: flex;
     /*flex-wrap: wrap;*/
@@ -74,6 +96,7 @@ body {
     border-radius: 40px;
 }
 
+/*---------------------------------------------------------------------sidebar */
 .sidebar {
     float: left;
     width: 15%;
@@ -96,6 +119,7 @@ body {
     color: white;
 }
 
+/*---------------------------------------------------------------------section1 */
 #section1 {
     /* background-color: rgb(117, 130, 107);*/
     background-color: #f5f4f0;
@@ -130,12 +154,8 @@ body {
 #section1bImg {
     border-radius: 40px;
 }
-/*
-#section1bImg {
-    height: 100%;
-    width: auto;
-}
-*/
+
+/*---------------------------------------------------------------------section2 */
 #section2 {
     background-color: #fff;
     padding: 10px;
@@ -144,7 +164,6 @@ body {
 #section2a {
     text-align: center;
     padding: 30px 10px;
-    font-family: sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 17px;
@@ -199,6 +218,7 @@ body {
     line-height: 30px;
 }
 
+/*---------------------------------------------------------------------section3 */
 #section3 {
     /* background-color: rgb(117, 130, 107);*/
     background-color: #f5f4f0;
@@ -232,6 +252,7 @@ body {
     border-radius: 20px;
 }
 
+/*---------------------------------------------------------------------section4 */
 #section4 {
     background-image: linear-gradient(to left top, #c1b1a8, #b5a296, #a99384, #9d8573, #907762);
     padding: 50px;
@@ -268,20 +289,29 @@ body {
     border-radius:40px;
 }
 
+/*---------------------------------------------------------------------section5*/
 #section5 {
     background-color: #fff;
     color:black;
     padding: 50px;
+    margin-bottom: 50px;
 }
 
 #section5box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section5box1, .section5box2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap:20px;
 }
 
-#section5a, #section5b, #section5c {
+#section5box1a, #section5box1b, #section5box1c,  
+#section5box2a, #section5box2b, #section5box2c{
     background-color: #eae2db;
     padding: 50px;
     text-align: center;
@@ -290,15 +320,201 @@ body {
     border-radius: 30px;
 }
 
-#section5a h3, #section5b h3, #section5c h3 {
+.section5box1 h3, .section5box2 h3 {
     color: #b6927c;
 }
 
-#section5, #section5h3{
+.section5box1, .section5box1h3, .section5box2, .section5box2h3{
     text-align: center;
     color: #343333;
 }
+/*---------------------------------------------------------------------section5*/
+#section6 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #343333;
+    max-width: 1250px;
+    /*margin: auto;*/
+    padding: 40px 20px;
+    justify-content: center;
+    border-top: 2px solid black;
+}
 
+#section6a {
+    background-color: #EAE2DB;
+    border-radius: 40px;
+    padding: 60px 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section6aElements {
+    display: flex;
+    flex-direction: column;
+}
+
+.section6aElements h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section6aElements p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Formularele – partea dreaptă */
+#section6b {
+    flex: 1;
+    padding: 20px 10px;
+}
+
+#section6b h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+#section6b p {
+    font-size: 14px;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Formular */
+#section6bForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: sans-serif;
+}
+
+#section6bForm label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#section6bForm input,
+#section6bForm textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+#section6bForm textarea {
+    min-height: 120px;
+}
+
+/* Buton */
+#section6bFormButton {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#section6bFormButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------------------------------section7 VIDEO */
+#section7{
+    background-color: #74826b;
+    display: flex;
+    flex-direction: column;
+}
+
+#section7a, #section7b{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+#section7aVideo1, #section7aVideo2, #section7aVideo3, #section7bVideo1, #section7bVideo2, #section7bVideo3{
+    padding: 30px;
+    border: 5px solid #A79890;
+    border-radius: 40px;
+    background-color: white;
+}
+
+
+/* -------------------------------------------------------------- section8 */
+#section8 {
+    background-color: white;
+    padding: 30px 50px;
+}
+
+#section8 h3 {
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+#section8a{
+    border: 2px solid #EAE2DB;
+    padding: 50px;
+}
+
+.controls label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.controls input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#strokeColor, #fillColor {
+    height:45px;
+    width: 75px;
+}
+#section8aDrawCanvas {
+    border:2px solid #EAE2DB;
+    margin-top: 30px;
+    
+}
+
+
+/* -----------------------------------------------------------------------section 9 */
+#section9b {
+    padding: 30px;
+}
+
+
+#section1, #section2, #section3, #section4, #section5, #section6, #section7, #section8 {
+    height: 100%;
+}
+
+/* -----------------------------------------------------------------------footer */
+.footer {
+    background-color: #74826b;
+    text-align: center;
+    padding: 10px;
+    /*margin-top:7px;*/
+    color: white;
+    width: 100%;
+}
+
+/*------------------------------------------------------------------------ alte elemente */
 #formular {
     background-color: #f5f4f0;
     padding: 40px;
@@ -313,6 +529,34 @@ body {
     border-radius: 40px;
 
 }
+
+#section9bTabelPersoane {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #section9bTabelPersoane td, #section9bTabelPersoane th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #section9bTabelPersoane tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #section9bTabelPersoane tr:hover {background-color: #ddd;}
+  
+  #section9bTabelPersoane th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white; 
+}
+
+#section9bTabelPersoane td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
 /*
 .article {
     background-color: #e5e5e5;
@@ -323,24 +567,13 @@ body {
     text-align: center;
 }
 */
-.footer {
-    background-color: #74826b;
-    text-align: center;
-    padding: 10px;
-    /*margin-top:7px;*/
-    color: white;
-    width: 100%;
-}
 
-#section1, #section2, #section3, #section4, #section5 {
-    height: 100%;
-}
 
+/* ---------------------------------------------------------- responsive */
 @media only screen and (max-width: 620px) {
     .sidebar,
     .navbar,
-    .header,
-    .home_page_image {
+    .header {
         width: 100%;
         float: none;
         display: flex;
@@ -349,7 +582,6 @@ body {
         flex: 100%;
     }
 }
-
 
 @media screen and (max-width: 767px) {
     .sidebar {
@@ -404,9 +636,30 @@ body {
         flex-direction: column;
     }
 
-    #section5box{
+    #section5box1, #section5box2{
         display: flex;
         flex-direction: column;
+    }
+
+    #section6{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #section7{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section7a, #section7b {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section7aVideo1, #section7aVideo2, #section7aVideo3,
+    #section7bVideo1, #section7bVideo2, #section7bVideo3{
+        margin: auto;
     }
 }
 

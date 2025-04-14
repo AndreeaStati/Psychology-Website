@@ -1,38 +1,26 @@
-<aside class="sidebar">
+<div class="sidebar" id="mySidebar">
     <a href="#section1">Section 1</a>
     <a href="#section2">Section 2</a>
     <a href="#section3">Section 3</a>
-</aside>
+</div>
 
-<div class="container">
-    <div class="center"> <!--center-->
-        <div id="section1">
-            <h2>Section 1</h2>
-            <p> Text </p>
-        </div>
 
-        <div id="section2">
-            <h2>Sectiunea 2 - Desenarea unui dreptunghi</h2>
+<div class="container" id="myContainer">
+    <div class="sectionBrowserInfo" id="browserInfo">
+        <p id="info"></p>
+    </div>
 
+    <div id="section8">
+        <h3>Desenarea unui dreptunghi</h3>
+        <div id="section8a">
             <div class="controls">
                 <label for="strokeColor">Culoare contur:</label>
-                <input type="color" id="strokeColor" value="#000000"><br>
-
+                <input type="color" id="strokeColor" value="#000000"><br><br>
+    
                 <label for="fillColor">Culoare umplere:</label>
                 <input type="color" id="fillColor" value="#ff0000">
             </div>
-
-            <canvas id="drawCanvas" width="600" height="400"></canvas>
-        </div>
-
-        <div id="section3">
-            <h2>Section 3</h2>
-            <p> Text </p>
+            <canvas id="section8aDrawCanvas" width="1050" height="400"></canvas>
         </div>
     </div>
-
-    <article> <!--right-->
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-    </article>
 </div>

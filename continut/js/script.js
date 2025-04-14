@@ -43,7 +43,6 @@ function displayTimeLocation() {
 
 function updateInfo(date, time, url, browserName, browserVersion, os, lat, long) {
     let section1 = document.getElementById('browserInfo');
-
     let infoParagraph = document.getElementById('info');
     if (!infoParagraph) {
         infoParagraph = document.createElement('p');
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function setupCanvasDrawing() {
-    const canvas = document.getElementById("drawCanvas");
+    const canvas = document.getElementById("section8aDrawCanvas");
     const ctx = canvas.getContext("2d");
     const strokeColorPicker = document.getElementById("strokeColor");
     const fillColorPicker = document.getElementById("fillColor");
@@ -116,7 +115,7 @@ function schimbaContinut(resursa, jsFisier, jsFunctie) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("continut").innerHTML = this.responseText; 
+            document.getElementById("mainContinut").innerHTML = this.responseText; 
             if (jsFisier) {
                 let elementScript = document.createElement('script');
                 elementScript.onload = function() {
@@ -138,12 +137,3 @@ function schimbaContinut(resursa, jsFisier, jsFunctie) {
     xhttp.send();
 }
 
-
-function openSidebar() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("myContainer").style.marginLeft = "250px";
-}
-
-function closeSidebar() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("myContainer").style.marginLeft= "0";  }

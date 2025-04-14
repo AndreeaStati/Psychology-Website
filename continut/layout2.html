@@ -21,22 +21,23 @@
 <body>
 
     <div class="navbar">
-        <a href="#" id="logo"> <img src="imagini/logo.jpg"></a>
-        <a href="index.html">ACASA</a>
-        <a href="inregistreaza.html">INREGISTRARE</a>
-        <a href="video.html">VIDEO</a>
-        <a href="despre.html">DESPRE</a>
-        <a href="desen.html">DESEN</a>
-        <a href="invat.html">INVAT</a>
-    </div>
+            <a href="#" id="logo"> <img src="imagini/logo.jpg"></a>
+            <a href="#" onclick="schimbaContinut('acasa')">ACASA</a> 
+            <a href="#" onclick="schimbaContinut('inregistreaza')">INREGISTRARE</a>
+            <a href="#" onclick="schimbaContinut('video')">VIDEO</a> 
+            <a href="#" onclick="schimbaContinut('despre')">DESPRE</a> 
+            <a href="#" onclick="schimbaContinut('desen')">DESEN</a>
+            <a href="#" onclick="schimbaContinut('invat')">INVAT</a>
+            <a href="#" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">PERSOANE</a>
+        </div>
 
-    <div class="header">
+    <div class="header" id="headerContinut">
         <div class="title">
             <h1>Header Title</h1>
         </div>
     </div>
 
-    <div class="main">
+    <div class="main" id="mainContinut">
         <div class="sidebar" id="mySidebar">
             <a href="#section1">Section 1</a>
             <a href="#section2">Section 2</a>
@@ -69,13 +70,13 @@
                 </div><br>
                 
                 <div id="section1b">
-                    <img src="imagini/psihologia_copilului.png" alt="imagine1" height="550" width="550" id="section1bImg">
+                    <img src="imagini/psihologia_copilului.png" alt="imagine1" height="350" width="350" id="section1bImg">
                 </div>
             </div>
 
             <div id="section2">
                 <div id="section2a">
-                    <h3>You’re here because dolor lacus cubilia morbi porttitor eros accumsan orci.</h3>
+                    <h3>You're here because dolor lacus cubilia morbi porttitor eros accumsan orci.</h3>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco re magna aliqua. </p>
                 </div>
 
@@ -132,22 +133,121 @@
             </div>
 
             <div id="section5">
-                <h3>What you need now is <i>ease</i>. I’m here to help you <i>simplify</i> the process as you begin your journey.</h3>
+                <h3>What you need now is <i>ease</i>. I'm here to help you <i>simplify</i> the process as you begin your journey.</h3>
                 <div id="section5box">
-                    <div id="section5a">
-                        <h3>Get in touch.</h3>
-                        <p> Lorem ipsum odor amet consectetuer adipiscing eli lorem ipsum dolor sit amet, consectetur labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+
+                    <div class="section5box1">
+                        <div id="section5box1a">
+                            <h3>Get in touch.</h3>
+                            <p> Lorem ipsum odor amet consectetuer adipiscing eli lorem ipsum dolor sit amet, consectetur labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
+                        </div>
+                        <div id="section5box1b">
+                            <h3>Begin your journey.</h3>
+                            <p>Natoque dictumst nascetur placerat aenean suscipit. Curae augue torquent habitasse ullamcorper duis auctor condimentum interdum faucibus erat sapien; aenean sit.</p>
+                        </div>
+                        <div id="section5box1c">
+                            <h3>Rediscover yourself.</h3>
+                            <p>Penatibus nibh inceptos potenti curae nibh varius eros lacus. Eros semper a magnis consectetur ante ante. Class vitae nibh dictumst nunc quam pulvinar est. Risus donec blandit.</p>
+                        </div>
                     </div>
-                    <div id="section5b">
-                        <h3>Begin your journey.</h3>
-                        <p>Natoque dictumst nascetur placerat aenean suscipit. Curae augue torquent habitasse ullamcorper duis auctor condimentum interdum faucibus erat sapien; aenean sit.</p>
-                    </div>
-                    <div id="section5c">
-                        <h3>Rediscover yourself.</h3>
-                        <p>Penatibus nibh inceptos potenti curae nibh varius eros lacus. Eros semper a magnis consectetur ante ante. Class vitae nibh dictumst nunc quam pulvinar est. Risus donec blandit.</p>
+
+                </div>
+            </div>
+
+            <div id="section6">
+                <div id="section6a">
+                    <div class="section6aElements" id="section6aE">
+                        <div id="section6aE1">
+                            <h4>Location</h4>
+                            <p>1234 Streetname, Suite 1 Cityname, State 12345</p>
+                        </div>
+                        <div id="section6aE2">
+                            <h4>Contact Info</h4>
+                            <p>info@yourwebsitename.com 222-333-4444</p>
+                        </div>
+                        <div id="section6aE3">
+                            <h4>Questions?</h4>
+                            <p>Check out the FAQ.</p>
+                        </div>
                     </div>
                 </div>
-            </div><br><br>
+
+                <div id="section6b">
+                    <h3><i>Send a message.</i></h3>
+                    <p>Use the button above to schedule a free consultation. For other inquiries, please fill out the form, and I'll get back to you within 48 hours. Thank you!</p>
+                
+                    <form id="section6bForm">
+                        <label for="firstname">Prenume:</label>
+                        <input type="text" id="firstname" name="firstname" />
+
+                        <label for="lastname">Nume:</label>
+                        <input type="text" id="lastname" name="lastname" /><br>
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" /><br>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message"></textarea><br>
+                        
+                        <button id="section6bFormButton" type="submit" disabled>Inregistreaza</button><br>
+                    </form>
+                </div>
+            </div>
+
+            <div id="section7">
+                <div id="section7a">
+                    <div id="section7aVideo1">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+
+                    <div id="section7aVideo2">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+
+                    <div id="section7aVideo3">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+                </div>
+
+                <div id="section7b">
+                    <div id="section7bVideo1">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+
+                    <div id="section7bVideo2">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+
+                    <div id="section7bVideo3">
+                        <iframe src="https://www.youtube.com/embed/N2oUfg7qNG0" height="200" width="300"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section8">
+                <h3>Desenarea unui dreptunghi</h3>
+                <div id="section8a">
+                    <div class="controls">
+                        <label for="strokeColor">Culoare contur:</label>
+                        <input type="color" id="strokeColor" value="#000000"><br><br>
+            
+                        <label for="fillColor">Culoare umplere:</label>
+                        <input type="color" id="fillColor" value="#ff0000">
+                    </div>
+                    <canvas id="section8aDrawCanvas" width="1050" height="400"></canvas>
+                </div>
+            </div>
+
+
+            <div id="section9">
+                <div id="section9a">
+                    <p id="section9aParagraf"><i>Se încarcă. Vă rugăm așteptați...</i></p>
+                </div>
+
+                <div id="section9b">
+                    <table id="section9bTabelPersoane"></table>
+                </div>
+            </div>  
             <p></p>
         </div>
     </div>
