@@ -1,10 +1,9 @@
 import socket
 import os
-import mimetypes 
-import gzip
-import io
-import threading
+import mimetypes
 import json
+import threading
+
 def handle_client(clientsocket):
     try:
         cerere = ''
@@ -22,69 +21,114 @@ def handle_client(clientsocket):
         linieDeStart = cerere.split('\r\n')[0]
         prima_linie = linieDeStart.split()
 
+        metoda = prima_linie[0]
+
         if len(prima_linie) > 1:
-            resursa = prima_linie[1] 
+            resursa = prima_linie[1] #resursa ceruta
         else:
             resursa = "/"
 
         if '?' in resursa:
-            resursa = resursa.split('?')[0]  # Elimină parametrii GET
-        print('************'+'nou  '+linieDeStart)
+            resursa = resursa.split('?')[0]  # Elimina parametrii GET
         
-
         director_curent = os.path.dirname(os.path.abspath(__file__))
         director_parinte = os.path.dirname(director_curent)
 
         print("Resursa cerută:", resursa)
+
         cale_fisier=''
+
+        # Adăugăm verificarea pentru fișierul utilizatori.json
+        if resursa == "/resurse/utilizatori.json":
+            fisier_utilizatori = os.path.join(director_parinte, "continut", "resurse", "utilizatori.json")
+            if os.path.isfile(fisier_utilizatori):
+                with open(fisier_utilizatori, "rb") as fisier:
+                    continut = fisier.read()
+                    raspuns = "HTTP/1.1 200 OK\r\n"
+                    raspuns += "Content-Type: application/json\r\n"
+                    raspuns += "Content-Length: " + str(len(continut)) + "\r\n"
+                    raspuns += "\r\n"
+                    clientsocket.send(raspuns.encode() + continut)
+            else:
+                mesaj_eroare = "<h1>404 Not Found</h1>".encode()
+                raspuns = "HTTP/1.1 404 Not Found\r\n"
+                raspuns += "Content-Type: text/html\r\n"
+                raspuns += "Content-Length: " + str(len(mesaj_eroare)) + "\r\n"
+                raspuns += "\r\n"
+                clientsocket.send(raspuns.encode() + mesaj_eroare)
+            return
+        
+        # **Adăugare pentru POST /api/utilizatori**
+        if resursa == "/api/utilizatori" and metoda == "POST":
+            # Citim datele trimise de client
+            continut_cerere = cerere.split("\r\n\r\n")[1]
+            try:
+                utilizator = json.loads(continut_cerere)  # Convertim corpul cererii JSON într-un obiect Python
+                print("Datele utilizatorului:", utilizator)
+
+                # Deschidem fișierul de utilizatori
+                fisier_utilizatori = os.path.join(director_parinte, "continut", "resurse", "utilizatori.json")
+                if os.path.isfile(fisier_utilizatori):
+                    with open(fisier_utilizatori, "r") as fisier:
+                        utilizatori_existenti = json.load(fisier)  # Citim utilizatorii existenți
+                else:
+                    utilizatori_existenti = []  # Dacă fișierul nu există, creăm o listă goală
+                
+                utilizatori_existenti.append(utilizator)  # Adăugăm utilizatorul nou la lista existentă
+
+                # Salvăm utilizatorii într-un fișier
+                with open(fisier_utilizatori, "w") as fisier:
+                    json.dump(utilizatori_existenti, fisier, indent=4)
+
+                # Răspuns cu succes
+                raspuns = "HTTP/1.1 200 OK\r\n"
+                raspuns += "Content-Type: application/json\r\n"
+                raspuns += "Content-Length: 0\r\n"  # Răspunsul nu are corp
+                raspuns += "\r\n"
+                clientsocket.send(raspuns.encode())
+
+            except json.JSONDecodeError:
+                mesaj_eroare = "<h1>400 Bad Request - JSON invalid</h1>".encode()
+                raspuns = "HTTP/1.1 400 Bad Request\r\n"
+                raspuns += "Content-Type: text/html\r\n"
+                raspuns += "Content-Length: " + str(len(mesaj_eroare)) + "\r\n"
+                raspuns += "\r\n"
+                clientsocket.send(raspuns.encode() + mesaj_eroare)
+
+            return
+
+        #director_curent = os.path.dirname(os.path.abspath(__file__))
+        #director_parinte = os.path.dirname(director_curent)
+
         if resursa == "/":
              resursa = "/index.html"  # Servim index.html dacă nu se specifică nimic
-
+        
         cale_fisier = os.path.join(director_parinte, "continut", resursa[1:])
-        print("director parinte: " + director_parinte)
         print("cale: " + cale_fisier)
-        print("resursa: " + resursa)
 
+        # Verificam daca fisierul exista
         if os.path.isfile(cale_fisier):
             with open(cale_fisier, "rb") as fisier:
                 continut = fisier.read()
 
-                # Construim răspunsul HTTP corect
-                
                 # Determinăm tipul MIME corect pentru fișier
-        #      tip_mime, _ = mimetypes.guess_type(cale_fisier)
-        #       if tip_mime is None:
-        #            tip_mime = "application/octet-stream"  # Tip generic pentru fișiere necunoscute
-            
             extensie = os.path.splitext(cale_fisier)[1].lower()
 
-                # Tratăm manual JSON și XML
             if extensie == ".json":
-                    tip_mime = "application/json"
+                tip_mime = "application/json"
             elif extensie == ".xml":
-                    tip_mime = "application/xml"
-                    #cale_fisier = "C:\Users\Andreea\Desktop\Anul 3\sem 2\PW\proiect-1-AndreeaStati\continut\resurse\persoane.xml"
-                    
+                tip_mime = "application/xml"
             else:
-                    tip_mime, _ = mimetypes.guess_type(cale_fisier)
+                tip_mime, _ = mimetypes.guess_type(cale_fisier)
             if tip_mime is None:
-                    tip_mime = "application/octet-stream"
+                tip_mime = "application/octet-stream"
 
-            if "gzip" in cerere.lower():
-                        # Comprimăm răspunsul cu gzip
-                    buf = io.BytesIO()
-                    with gzip.GzipFile(fileobj=buf, mode="wb") as f:
-                        f.write(continut)
-                    continut_comprimat = buf.getvalue()
-
-                # Construim răspunsul HTTP corect
             raspuns = "HTTP/1.1 200 OK\r\n"
             raspuns += f"Content-Type: {tip_mime}\r\n"
             raspuns += "Content-Length: " + str(len(continut)) + "\r\n"
             raspuns += "\r\n"
             clientsocket.send(raspuns.encode() + continut)
         else:
-            # Dacă fișierul nu există, trimitem 404 Not Found
             mesaj_eroare = "<h1>404 Not Found</h1>".encode()
             raspuns = "HTTP/1.1 404 Not Found\r\n"
             raspuns += "Content-Type: text/html\r\n"
@@ -92,24 +136,21 @@ def handle_client(clientsocket):
             raspuns += "\r\n"
             clientsocket.send(raspuns.encode() + mesaj_eroare)
     finally:
-        # Închidem conexiunea cu clientul
         clientsocket.close()
         print('S-a terminat comunicarea cu clientul.')
+
 
 # Creează un server socket
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversocket.bind(('', 5678))  # Rulează pe portul 5678
-serversocket.listen(5)  # Serverul poate accepta conexiuni
-
+serversocket.listen(5)
 
 while True:
     print('#########################################################################')
     print('Serverul asculta potentiali clienti.')
 
-    # Așteaptă conectarea unui client
     (clientsocket, address) = serversocket.accept()
     print('S-a conectat un client.')
 
-    # Creează un nou fir de execuție pentru a prelucra cererea clientului
     client_thread = threading.Thread(target=handle_client, args=(clientsocket,))
     client_thread.start()

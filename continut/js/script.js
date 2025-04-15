@@ -72,11 +72,15 @@ function updateTime() {
 
 document.addEventListener("DOMContentLoaded", function() {
     displayTimeLocation(); //  S1
-    setupCanvasDrawing(); //  S2
+    //setupCanvasDrawing(); //  S2
 });
 
 function setupCanvasDrawing() {
     const canvas = document.getElementById("section8aDrawCanvas");
+    if (!canvas) {
+        console.warn("Canvas nu exista pe aceasta pagina.");
+        return;
+    }
     const ctx = canvas.getContext("2d");
     const strokeColorPicker = document.getElementById("strokeColor");
     const fillColorPicker = document.getElementById("fillColor");
@@ -154,14 +158,14 @@ function insertColumn() {
 
 /* ----------------------------------------------------------------------------------------- */
 function schimbaContinut(resursa, jsFisier, jsFunctie) {
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("mainContinut").innerHTML = this.responseText; 
             if (jsFisier) {
                 let elementScript = document.createElement('script');
                 elementScript.onload = function() {
-                    console.log("hello");
+                    console.log("Script incarcat cu succes");
                     if (jsFunctie) {
                         window[jsFunctie]();
                     }
@@ -178,4 +182,5 @@ function schimbaContinut(resursa, jsFisier, jsFunctie) {
     xhttp.open("GET", resursa + ".html", true);
     xhttp.send();
 }
+
 

@@ -1,12 +1,3 @@
-<!-- 
-    <header> = introductory content (title, logo, author information)
-    <nav> = navigation bar, links
-    <main> = main content (section, aside, article, div)
-    <section> = dependent content
-    <aside> = side content (author information,  fun facts, external links)
-    <article> = independent content (news articles, blog posts)
-    <footer> = closing content (copyright, navigational links)
--->
 <!DOCTYPE html>
 <html lang="ro-RO">
     <head>
@@ -21,12 +12,13 @@
         <div class="navbar">
             <a href="#" id="logo"> <img src="imagini/logo.jpg" alt="logo"></a>
             <a href="#" onclick="schimbaContinut('acasa')">ACASA</a> 
-            <a href="#" onclick="schimbaContinut('inregistreaza')">INREGISTRARE</a>
+            <a href="#" onclick="schimbaContinut('inregistreaza', 'js/inregistreaza.js', 'initFormInregistrare')">INREGISTRARE</a>
             <a href="#" onclick="schimbaContinut('video')">VIDEO</a> 
             <a href="#" onclick="schimbaContinut('despre')">DESPRE</a> 
             <a href="#" onclick="schimbaContinut('desen')">DESEN</a>
-            <a href="#" onclick="schimbaContinut('invat')">INVAT</a>
+            <a href="#" onclick="schimbaContinut('invat', 'js/script.js', 'setupCanvasDrawing')">INVAT</a>
             <a href="#" onclick="schimbaContinut('persoane', 'js/persoane.js', 'incarcaPersoane')">PERSOANE</a>
+            <a href="#" onclick="schimbaContinut('verifica', 'js/verifica.js', 'verificaUtilizator')">VERIFICA</a>
         </div>
 
         <div class="header" id="headerContinut">
@@ -39,7 +31,6 @@
                 <img src="imagini/psihologia_copilului.png" alt="imagineHeader" width="300" height="300" id="imagineHeader">
             </div>
         </div>
-    
 
         <div class="main" id="mainContinut"></div>
 
