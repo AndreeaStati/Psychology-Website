@@ -62,7 +62,7 @@ body {
 }
 
 #header1 {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 #header1 h2 {
@@ -70,6 +70,12 @@ body {
     font-size: 60px;
     line-height: 76px;
     font-weight: 100;
+    padding: 1px 30px;
+}
+
+#header1 p {
+    font-size: 20px;
+    padding: 10px 30px;
 }
 
 #header2 {
@@ -92,6 +98,7 @@ body {
     justify-content: space-between;
     background-color: #f5f4f0;
     flex-direction: column;
+    gap: 20px;
     border: 2px;
     border-radius: 40px;
 }
@@ -103,7 +110,7 @@ body {
     text-align: center;
     background-color: #f5f4f0;
 }
-  
+
 .sidebar a {
     background-color: #e5e5e5;
     padding: 8px;
@@ -132,7 +139,7 @@ body {
 }
 
 #section1a {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 #section1a h2 {
@@ -163,9 +170,8 @@ body {
 
 #section2a {
     text-align: center;
-    padding: 30px 10px;
+    padding: 30px;
     font-style: normal;
-    font-weight: 300;
     font-size: 17px;
     line-height: 30px;
 }
@@ -197,11 +203,12 @@ body {
     max-width: 400px;
     height: auto;
     border-radius: 20px;
-  }
+}
 
 #section2btext {
     background-color: #75826b;
-    margin-left: 300px; /* sau cât să lase loc pt imagine */
+    margin-left: 300px;
+    /* sau cât să lase loc pt imagine */
     padding: 60px;
     color: white;
     flex: 1;
@@ -210,31 +217,26 @@ body {
     border-radius: 10px 0 0 10px;
 }
 
-#section2bTextList {
+.sectionList {
     font-family: 'Figtree';
     font-style: normal;
-    font-weight: 300;
     font-size: 16px;
     line-height: 30px;
+    list-style-type: disc;
 }
 
 /*---------------------------------------------------------------------section3 */
 #section3 {
-    /* background-color: rgb(117, 130, 107);*/
-    background-color: #f5f4f0;
-    padding: 20px;
-    color: black;
     display: flex;
     flex-direction: row;
-    /*justify-content: space-evenly;*/
-    gap: 150px;
+    gap: 70px;
+    padding: 20px;
+    background-color: #f5f4f0;
+    color: black;
 }
 
 #section3a {
-    vertical-align:middle;
-    align-items: center;
-    padding: 40px;
-    width: 50%;
+    padding: 20px;
 }
 
 #section3aButton {
@@ -246,10 +248,36 @@ body {
     border-radius: 40px;
 }
 
-#section3bImg {
+#section3b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 60px;
+    /*justify-content: space-around;*/
+    gap: 20px;
+}
+
+#section3b1,
+#section3b2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+/*
+.section3bImg {
     max-width: 400px;
     height: auto;
-    border-radius: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 0px;
+}
+*/
+.sectionList li {
+    margin: 20px;
 }
 
 /*---------------------------------------------------------------------section4 */
@@ -261,38 +289,58 @@ body {
     gap: 10px;
 }
 
-#section4 h2 {
+#section4>h2 {
     text-align: center;
-    color: black;
+    color: #fff;
+}
+
+#section4>p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px 30px 10px 30px;
+    color: #fff;
 }
 
 #section4box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap:20px;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
-#section4a, #section4b, #section4c {
+#section4a,
+#section4b,
+#section4c,
+#section4d {
     background-color: #fff;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
-    color:#343333;
-    
+    color: #343333;
+
 }
 
-.section4Buttons{
+.section4Buttons {
     background-color: #a08b7a;
-    color:white;
+    color: white;
     padding: 20px 20px;
-    border:2px;
-    border-radius:40px;
+    border: 2px;
+    border-radius: 40px;
+}
+
+.section4boxImages {
+    width: 220px;
+    height: 140px;
+    padding: 10px;
+}
+
+#section4dImg {
+    margin-top: 30px;
 }
 
 /*---------------------------------------------------------------------section5*/
 #section5 {
     background-color: #fff;
-    color:black;
+    color: black;
     padding: 50px;
     margin-bottom: 50px;
 }
@@ -303,15 +351,20 @@ body {
     gap: 30px;
 }
 
-.section5box1, .section5box2 {
+.section5box1,
+.section5box2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap:20px;
+    gap: 20px;
 }
 
-#section5box1a, #section5box1b, #section5box1c,  
-#section5box2a, #section5box2b, #section5box2c{
+#section5box1a,
+#section5box1b,
+#section5box1c,
+#section5box2a,
+#section5box2b,
+#section5box2c {
     background-color: #eae2db;
     padding: 50px;
     text-align: center;
@@ -320,14 +373,19 @@ body {
     border-radius: 30px;
 }
 
-.section5box1 h3, .section5box2 h3 {
+.section5box1 h3,
+.section5box2 h3 {
     color: #b6927c;
 }
 
-.section5box1, .section5box1h3, .section5box2, .section5box2h3{
+.section5box1,
+.section5box1h3,
+.section5box2,
+.section5box2h3 {
     text-align: center;
     color: #343333;
 }
+
 /*---------------------------------------------------------------------section5*/
 #section6 {
     display: flex;
@@ -432,13 +490,14 @@ body {
 }
 
 /* -----------------------------------------------------------------------section7 VIDEO */
-#section7{
+#section7 {
     background-color: #74826b;
     display: flex;
     flex-direction: column;
 }
 
-#section7a, #section7b{
+#section7a,
+#section7b {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -446,7 +505,12 @@ body {
     padding: 30px;
 }
 
-#section7aVideo1, #section7aVideo2, #section7aVideo3, #section7bVideo1, #section7bVideo2, #section7bVideo3{
+#section7aVideo1,
+#section7aVideo2,
+#section7aVideo3,
+#section7bVideo1,
+#section7bVideo2,
+#section7bVideo3 {
     padding: 30px;
     border: 5px solid #A79890;
     border-radius: 40px;
@@ -456,8 +520,10 @@ body {
 
 /* -------------------------------------------------------------- section8 */
 #section8 {
-    background-color: white;
+    margin: 20px;
+    background-color: #3E4A3D;
     padding: 30px 50px;
+    color: #eae2db;
 }
 
 #section8 h3 {
@@ -467,7 +533,7 @@ body {
     font-size: 30px;
 }
 
-#section8a{
+#section8a {
     border: 2px solid #EAE2DB;
     padding: 50px;
 }
@@ -483,14 +549,18 @@ body {
     font-size: 16px;
 }
 
-#strokeColor, #fillColor {
-    height:45px;
+#strokeColor,
+#fillColor,
+#colorInput {
+    height: 45px;
     width: 75px;
 }
+
 #section8aDrawCanvas {
-    border:2px solid #EAE2DB;
+    background-color: #ffffff;
+    border: 2px solid #EAE2DB;
     margin-top: 30px;
-    
+
 }
 
 
@@ -499,9 +569,165 @@ body {
     padding: 30px;
 }
 
+#section9bTabelPersoane {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-#section1, #section2, #section3, #section4, #section5, #section6, #section7, #section8 {
+#section9bTabelPersoane td,
+#section9bTabelPersoane th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#section9bTabelPersoane tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#section9bTabelPersoane tr:hover {
+    background-color: #ddd;
+}
+
+#section9bTabelPersoane th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#section9bTabelPersoane td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+/* ------------------------------------------------- section10 */
+#section10{
+        text-align: center;
+        background-color: #ffffff;
+    }
+    
+#section10>h3 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 24px;
+    }
+
+
+#section10input label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#section10input input{
+    margin:10px;
+}
+
+#section10input #positionInput {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+/* Buton */
+#insertRow, #insertColumn {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#insertRow:disabled, #insertColumn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+#section10table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+    margin: 20px auto; /* <-- asta îl centrează */
+}
+
+#section10table td,
+#section10table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#section10table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#section10table tr:hover {
+    background-color: #ddd;
+}
+
+#section10table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#section10table td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+
+
+/* -----------------------------------------------------------------------section10 */
+
+
+#section1,
+#section2,
+#section3,
+#section4,
+#section5,
+#section6,
+#section7,
+#section8 {
     height: 100%;
+}
+
+/* -----------------------------------------------------------------------section info */
+#browserInfo {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#browserInfo>h3 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+#infoDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.info {
+    background-color: #eae2db;
+    padding: 50px;
+    text-align: center;
+    color: #343333;
+    border: 2px;
+    border-radius: 30px;
 }
 
 /* -----------------------------------------------------------------------footer */
@@ -522,7 +748,8 @@ body {
     vertical-align: middle;
 }
 
-.list1, .list2 {
+.list1,
+.list2 {
     background-color: #eae2db;
     padding: 15px;
     border: 2px;
@@ -530,33 +757,7 @@ body {
 
 }
 
-#section9bTabelPersoane {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #section9bTabelPersoane td, #section9bTabelPersoane th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #section9bTabelPersoane tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #section9bTabelPersoane tr:hover {background-color: #ddd;}
-  
-  #section9bTabelPersoane th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: rgb(182, 146, 124);
-    color: white; 
-}
 
-#section9bTabelPersoane td {
-    background-color: #f5f4f0;
-    padding: 20px 15px;
-}
 /*
 .article {
     background-color: #e5e5e5;
@@ -568,12 +769,12 @@ body {
 }
 */
 
-
 /* ---------------------------------------------------------- responsive */
 @media only screen and (max-width: 620px) {
+
     .sidebar,
     .navbar,
-    .header {
+    #headerContinut {
         width: 100%;
         float: none;
         display: flex;
@@ -584,17 +785,24 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-    .sidebar {
-        width: 0px;
+
+    #headerContinut {
+        display: flex;
+        flex-direction: column;
     }
 
-    #section1{
+    #header2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #section1 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #section1a h2{
+    #section1a h2 {
         font-size: 38px;
         font-weight: 100;
         line-height: 48px;
@@ -602,10 +810,10 @@ body {
 
     #section2b {
         display: flex;
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
         align-items: center;
         position: relative;
-        gap:20px;
+        gap: 20px;
     }
 
     #section1a,
@@ -614,15 +822,18 @@ body {
         text-align: center;
     }
 
-    #section1bImg, #section2bImg {
+    #section1bImg,
+    #section2bImg {
         max-width: 90%;
         height: auto;
     }
 
     #section2bimg {
-        position: static; /* elimină poziționarea absolută */
+        position: static;
+        /* elimină poziționarea absolută */
         transform: none;
-        margin-bottom: 20px; /* opțional, spațiere între imagine și text */
+        margin-bottom: 20px;
+        /* opțional, spațiere între imagine și text */
     }
 
     #section2btext {
@@ -631,40 +842,65 @@ body {
         padding: 30px;
     }
 
+    #section3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section3a {
+        width: 100%;
+    }
+
+    #section3b {
+        margin-top: 0px;
+        gap: 0px;
+    }
+
     #section4box {
         display: flex;
         flex-direction: column;
     }
 
-    #section5box1, #section5box2{
+    #section5box1,
+    #section5box2 {
         display: flex;
         flex-direction: column;
     }
 
-    #section6{
+    #section6 {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
     }
 
-    #section7{
+    #section7 {
         display: flex;
         flex-direction: column;
     }
 
-    #section7a, #section7b {
+    #section7a,
+    #section7b {
         display: flex;
         flex-direction: column;
     }
 
-    #section7aVideo1, #section7aVideo2, #section7aVideo3,
-    #section7bVideo1, #section7bVideo2, #section7bVideo3{
+    #section7aVideo1,
+    #section7aVideo2,
+    #section7aVideo3,
+    #section7bVideo1,
+    #section7bVideo2,
+    #section7bVideo3 {
         margin: auto;
     }
+
+    #section8aDrawCanvas {}
 }
 
 @media screen and (min-width: 768px) {
-    #section5a, #section5b, #section5c{
+
+    #section5a,
+    #section5b,
+    #section5c {
         padding: 30px;
     }
 }

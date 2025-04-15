@@ -7,7 +7,13 @@
 
 <div class="container" id="myContainer">
     <div class="sectionBrowserInfo" id="browserInfo">
-        <p id="info"></p>
+        <h3>Informații despre sesiunea curentă</h3>
+        <div id="infoDiv">
+            <p class="info" id="dateTime"></p>
+            <p class="info" id="urlAddress"></p>
+            <p class="info" id="browserNameVersion"></p>
+            <p class="info" id="operatingSystem"></p>
+        </div>
     </div>
 
     <div id="section8">
@@ -23,4 +29,35 @@
             <canvas id="section8aDrawCanvas" width="1050" height="400"></canvas>
         </div>
     </div>
+
+    <div id="section10">
+        <h3>Tabel</h3>
+        <div class="section10a" id="section10input">
+            <label for="positionInput">Poziția:</label>
+            <input type="number" id="positionInput" min="0" placeholder="Ex: 1"><br>
+
+            <label for="colorInput">Alege o culoare:</label>
+            <input type="color" id="colorInput" value="#f0f0f0"><br>
+
+            <button id="insertRow" onclick="insertRow()">Inserează linie</button>
+            <button id="insertColumn" onclick="insertColumn()">Inserează coloană</button>
+        </div>
+
+        <table id="section10table">
+            <caption> Tabel </caption>
+            <tr>
+                <th>Info1</th>
+                <th>Info2</th>
+            </tr>
+            <tr>
+                <td>Data1</td>
+                <td>Data2</td>
+            </tr>
+            <tr>
+                <td>Data3</td>
+                <td>Data4</td>
+            </tr>
+        </table>
+    </div>
+
 </div>

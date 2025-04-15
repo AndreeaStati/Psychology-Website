@@ -1,3 +1,4 @@
+/* ----------------------------------------------------------------------------- lab5 */
 function calledOnLoad() {
     displayTimeLocation();
 }
@@ -26,9 +27,9 @@ function displayTimeLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
-                let latitude = position.coords.latitude;
-                let longitude = position.coords.longitude;
-                updateInfo(today, timeNow, url, browserName, browserVersion, operatingSystem, latitude.toFixed(4), longitude.toFixed(4));
+                let latitude = position.coords.latitude.toFixed(4);
+                let longitude = position.coords.longitude.toFixed(4);
+                updateInfo(today, timeNow, url, browserName, browserVersion, operatingSystem, latitude, longitude);
             },
             function(error) {
                 updateInfo(today, timeNow, url, browserName, browserVersion, operatingSystem, "Locație indisponibilă", "Locație indisponibilă");
@@ -42,21 +43,23 @@ function displayTimeLocation() {
 }
 
 function updateInfo(date, time, url, browserName, browserVersion, os, lat, long) {
-    let section1 = document.getElementById('browserInfo');
-    let infoParagraph = document.getElementById('info');
-    if (!infoParagraph) {
-        infoParagraph = document.createElement('p');
-        infoParagraph.id = 'info';
-        section1.appendChild(infoParagraph);
-    }
+    let dateTimeEl = document.getElementById('dateTime');
+    let urlEl = document.getElementById('urlAddress');
+    let browserEl = document.getElementById('browserNameVersion');
+    let osEl = document.getElementById('operatingSystem');
 
-    infoParagraph.innerHTML = `<br>Data curentă: ${date}<br>
-                               Timpul curent: <span id="liveTime">${time}</span><br>
-                               Adresa URL: ${url}<br>
-                               Numele Browser-ului: ${browserName}<br>
-                               Versiunea Browser-ului: ${browserVersion}<br>
-                               Sistem de operare: ${os}<br>
-                               Locație: Latitudine ${lat}, Longitudine ${long}`;
+    if (dateTimeEl) {
+        dateTimeEl.innerHTML = `Data curentă: ${date} <br> Timpul curent: <span id="liveTime">${time}</span>`;
+    }
+    if (urlEl) {
+        urlEl.innerHTML = `Adresa URL: ${url}`;
+    }
+    if (browserEl) {
+        browserEl.innerHTML = `Browser: ${browserName} <br> Versiune: ${browserVersion}`;
+    }
+    if (osEl) {
+        osEl.innerHTML = `Sistem de operare: ${os} <br> Locație: Latitudine ${lat}, Longitudine ${long}`;
+    }
 }
 
 function updateTime() {
@@ -111,6 +114,45 @@ function setupCanvasDrawing() {
     });
 }
 
+
+function insertRow() {
+    const table = document.getElementById("section10table");
+    const position = parseInt(document.getElementById("positionInput").value);
+    const color = document.getElementById("colorInput").value;
+
+    if (isNaN(position) || position < 0 || position > table.rows.length) {
+        alert("Pozitie invalida pentru inserarea randului.");
+        return;
+    }
+
+    const colCount = table.rows[0].cells.length;
+    const newRow = table.insertRow(position);
+
+    for (let i = 0; i < colCount; i++) {
+        const newCell = newRow.insertCell(i);
+        newCell.style.backgroundColor = color;
+        newCell.innerHTML = "&nbsp;";
+    }
+}
+
+function insertColumn() {
+    const table = document.getElementById("section10table");
+    const position = parseInt(document.getElementById("positionInput").value);
+    const color = document.getElementById("colorInput").value;
+
+    if (isNaN(position) || position < 0 || position > table.rows[0].cells.length) {
+        alert("Pozitie invalida pentru inserarea coloanei.");
+        return;
+    }
+
+    for (let i = 0; i < table.rows.length; i++) {
+        const newCell = table.rows[i].insertCell(position);
+        newCell.style.backgroundColor = color;
+        newCell.innerHTML = "&nbsp;";
+    }
+}
+
+/* ----------------------------------------------------------------------------------------- */
 function schimbaContinut(resursa, jsFisier, jsFunctie) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
