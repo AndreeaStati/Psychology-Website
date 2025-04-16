@@ -757,7 +757,89 @@ body {
 
 }
 
+/* ------------------------------------------------ cumparaturi.html -> form*/
 
+#sectionCumparaturi {
+    background-color: #EAE2DB;
+    border-radius: 40px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    width: 70%;
+    margin-left: 250px;
+}
+
+#formCumparaturi {
+    display: flex;
+    flex-direction: row;
+}
+
+#formCumparaturi label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#formCumparaturi input{
+    margin:10px;
+    width: 350px;
+}
+
+#productAmount, #productName {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+/* Buton */
+#addProduct {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: center;
+}
+
+#tableCumparaturi {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tableCumparaturi td,
+#tableCumparaturi th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tableCumparaturi tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableCumparaturi tr:hover {
+    background-color: #ddd;
+}
+
+#tableCumparaturi th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#tableCumparaturi td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+ 
 /*
 .article {
     background-color: #e5e5e5;
@@ -830,10 +912,8 @@ body {
 
     #section2bimg {
         position: static;
-        /* elimină poziționarea absolută */
         transform: none;
         margin-bottom: 20px;
-        /* opțional, spațiere între imagine și text */
     }
 
     #section2btext {

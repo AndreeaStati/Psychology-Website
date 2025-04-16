@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------------- lab5 */
-function calledOnLoad() {
-    displayTimeLocation();
+function actualizareSectiuni(){
+    displayTimeLocation(); //  S1
+    setupCanvasDrawing(); // S2
 }
-
 function displayTimeLocation() {
     let today = new Date().toLocaleDateString();
     let timeNow = new Date().toLocaleTimeString();
@@ -70,10 +70,6 @@ function updateTime() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    displayTimeLocation(); //  S1
-    //setupCanvasDrawing(); //  S2
-});
 
 function setupCanvasDrawing() {
     const canvas = document.getElementById("section8aDrawCanvas");
