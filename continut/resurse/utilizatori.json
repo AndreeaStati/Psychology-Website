@@ -7,5 +7,42 @@
         "prenume": "",
         "nume": "",
         "email": ""
+    },
+    {
+        "prenume": "Andreea",
+        "nume": "Stati",
+        "email": "abc.2003@gmail.com"
+    },
+    {
+        "numeUtilizator": "andreeaS",
+        "parola": "siteWeb",
+        "nume": "Stati",
+        "prenume": "Andreea",
+        "email": "abc.2003@gmail.com",
+        "phone": {}
+    },
+    {
+        "numeUtilizator": "andreeaS",
+        "parola": "siteWeb",
+        "nume": "Stati",
+        "prenume": "Andreea",
+        "email": "abc.2003@gmail.com",
+        "phone": {}
+    },
+    {
+        "numeUtilizator": "andreeaS",
+        "parola": "siteW",
+        "nume": "Stati",
+        "prenume": "Andreea",
+        "email": "abc.2003@gmail.com",
+        "telefon": "0712345678"
+    },
+    {
+        "utilizator": "andreeaS",
+        "parola": "siteW",
+        "nume": "",
+        "prenume": "",
+        "email": "",
+        "telefon": ""
     }
 ]

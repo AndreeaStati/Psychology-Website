@@ -18,7 +18,7 @@
         <telefon>0751789456</telefon>
         <studii>
             <universitate>Universitatea Alexandru Ioan Cuza</universitate>
-            <facultate>Facultatea de Drept</facultate>
+            <facultate>Facultatea de Psihologie</facultate>
             <oras>Iasi</oras>
         </studii>
     </persoana>
@@ -36,9 +36,28 @@
         </adresa>
         <telefon>0742123456</telefon>
         <studii>
-            <universitate>Universitatea Tehnica Gheorghe Asachi</universitate>
-            <facultate>Facultatea de Automatica si Calculatoare</facultate>
-            <oras>Iasi</oras>
+            <universitate>Universitatea din Bucuresti</universitate>
+            <facultate>Facultatea de Psihologie și Științele Educației</facultate>
+            <oras>Bucuresti</oras>
+        </studii>
+    </persoana>
+
+    <persoana id="3">
+        <nume>Popovici</nume>
+        <prenume>Ioana</prenume>
+        <varsta>46</varsta>
+        <adresa> 
+            <strada>Bulevardul Sperantei</strada>
+            <numar>2</numar>
+            <localitate>Dej</localitate>
+            <judet>Cluj</judet>
+            <tara>Romania</tara>
+        </adresa>
+        <telefon>071234593</telefon>
+        <studii>
+            <universitate>Universitatea Babeș-Bolyai</universitate>
+            <facultate>Facultatea de Psihologie si Stiinte ale Educatiei</facultate>
+            <oras>Cluj Napoca</oras>
         </studii>
     </persoana>
 

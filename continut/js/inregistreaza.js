@@ -11,14 +11,20 @@ function initFormInregistrare() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
-        const prenume = document.getElementById("firstname").value;
+        const utilizator = document.getElementById("username").value;
+        const parola = document.getElementById("pass").value; 
         const nume = document.getElementById("lastname").value;
+        const prenume = document.getElementById("firstname").value;
         const email = document.getElementById("email").value;
+        const telefon = document.getElementById("phone").value;
 
-        const utilizator = {
-            prenume,
+        const user = {
+            utilizator,
+            parola,
             nume,
-            email
+            prenume,
+            email,
+            telefon
         };
 
         fetch("/api/utilizatori", {
@@ -26,7 +32,7 @@ function initFormInregistrare() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(utilizator)
+            body: JSON.stringify(user)
         })
         .then(response => {
             if (!response.ok) throw new Error("Eroare la trimiterea formularului.");

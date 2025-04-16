@@ -445,7 +445,7 @@ body {
 }
 
 #section6b p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 40px;
     max-width: 600px;
 }
@@ -455,20 +455,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-family: sans-serif;
 }
 
 #section6bForm label {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 1px;
 }
 
 #section6bForm input,
 #section6bForm textarea {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     width: 70%;
     max-width: 600px;
     background-color: #fafafa;
@@ -494,6 +493,19 @@ body {
 #section6bFormButton:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+#stilDeAtasament {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+.intrebare{
+    width: 200px;
 }
 
 /* -----------------------------------------------------------------------section7 VIDEO */
@@ -574,8 +586,14 @@ body {
 /* -----------------------------------------------------------------------section 9 */
 #section9b {
     padding: 30px;
+    text-align: center;
 }
 
+#section9b h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
 #section9bTabelPersoane {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -753,6 +771,51 @@ body {
     padding: 40px;
     text-align: justify;
     vertical-align: middle;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formular label {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+#formular input,
+#formular textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+
+#formular textarea {
+    min-height: 120px;
+}
+
+/* Buton */
+#formular button {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+#fieldset1, #fieldset2{
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid #3E4A3D;
+    border-radius: 40px;
+    background-color: #EAE2DB;
 }
 
 .list1,
