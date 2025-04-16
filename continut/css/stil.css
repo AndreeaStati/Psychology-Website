@@ -1,141 +1,1095 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    max-width: 1600px;
 }
 
 body {
-    background-color: #FEFAE0;
-    padding: 10px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    -ms-flex-align: center;
-    justify-content: space-between;
+    background-color: #f5f4f0;
+    font-family: 'ivypresto-display';
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
 }
 
-header {
-    background-color: #E2E0C8;
+/* ---------------------------------------------------------------------------------- navbar */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2px;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    background-color: #f5f4f0;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    background-color: #A8CABA;
-    padding: 15px;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.navbarItem{
+    flex-shrink: 1;
 }
 
-nav a {
-    color: darkslategrey;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
+.navbar a {
+    background-color: #f5f4f0;
+    padding: 8px;
+    margin-top: 7px;
+    width: 20%;
+    color: rgb(40, 48, 40);
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #5F6F52;
+.navbar a:hover {
+    background-color: #3E4A3D;
     color: white;
-    transform: scale(1.05);
 }
 
-main {
+.navbar img {
+    height: 64px;
+    width: 64px;
+}
+
+#logo {
+    width: 80px;
+}
+
+#logo:hover {
+    background-color: #958271;
+}
+
+/*---------------------------------------------------------------------------------- header*/
+#headerContinut {
+    /* background-color: rgb(117, 130, 107);*/
+    background-color: #f5f4f0;
+    padding: 20px;
+    color: black;
     display: flex;
-    justify-content: space-between;
-    background-color: #E2E0C8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 
-.sidebar {
-    background-color: #B99470;
-    padding: 20px;
-    border-radius: 10px;
-    width: 23%;
-    height: fit-content;
+#header1 {
+    vertical-align: middle;
 }
 
-.sidebar h3 {
-    color: white;
+#header1 h2 {
+    font-family: 'ivypresto-display';
+    font-size: 60px;
+    line-height: 76px;
+    font-weight: 100;
+    padding: 1px 30px;
+}
+
+#header1 p {
     font-size: 20px;
-    margin-bottom: 10px;
+    padding: 10px 30px;
 }
 
-.sidebar p {
-    margin-bottom: 10px;
+#header2 {
+    width: 50%;
+}
+
+#headerImg {
+    border-radius: 40px;
+}
+
+/*---------------------------------------------------------------------------------- main*/
+.main {
+    padding: 10px;
+}
+
+/*---------------------------------------------------------------- continut main sectiuni */
+.container {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+    background-color: #f5f4f0;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px;
+    border-radius: 40px;
+}
+
+/*---------------------------------------------------------------------sidebar */
+.sidebar {
+    float: left;
+    width: 15%;
+    text-align: center;
+    background-color: #f5f4f0;
 }
 
 .sidebar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    background-color: #5F6F52;
+    background-color: #e5e5e5;
     padding: 8px;
+    margin-top: 7px;
     display: block;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s ease;
+    width: 100%;
+    color: black;
+    text-decoration: none;
 }
 
 .sidebar a:hover {
     background-color: #3E4A3D;
+    color: white;
 }
 
-.content {
-    width: 75%;
+/*---------------------------------------------------------------------section1 */
+#section1 {
+    /* background-color: rgb(117, 130, 107);*/
+    background-color: #f5f4f0;
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#section1a {
+    vertical-align: middle;
+}
+
+#section1a h2 {
+    font-family: 'ivypresto-display';
+    font-size: 60px;
+    line-height: 76px;
+    font-weight: 100;
+}
+
+#section1aButton {
+    width: 50%;
+    background-color: #75826b;
+    color: white;
+    padding: 20px;
+    border: 2px;
+    border-radius: 40px;
+}
+
+#section1bImg {
+    border-radius: 40px;
+}
+
+/*---------------------------------------------------------------------section2 */
+#section2 {
+    background-color: #fff;
+    padding: 10px;
+}
+
+#section2a {
+    text-align: center;
+    padding: 30px;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+#section2a h3 {
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#section2b {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+#section2bimg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#section2bImg {
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+#section2btext {
+    background-color: #75826b;
+    margin-left: 300px;
+    /* sau cât să lase loc pt imagine */
+    padding: 60px;
+    color: white;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px 0 0 10px;
+}
+
+.sectionList {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 30px;
+    list-style-type: disc;
+}
+
+/*---------------------------------------------------------------------section3 */
+#section3 {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 20px;
+    background-color: #f5f4f0;
+    color: black;
+}
+
+#section3a {
+    padding: 20px;
+}
+
+#section3aButton {
+    width: 50%;
+    background-color: #75826b;
+    color: white;
+    padding: 20px;
+    border: 2px;
+    border-radius: 40px;
+}
+
+#section3b {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 60px;
+    /*justify-content: space-around;*/
     gap: 20px;
 }
 
-section {
-    background-color: antiquewhite;
-    padding: 15px;
-    border-radius: 5px;
-    height: 90vh;
-    /*white-space:pre;*/
+#section3b1,
+#section3b2 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-evenly;
+    padding: 20px;
 }
 
-footer {
-    background-color: #E2E0C8;
-    padding: 15px;
-    width: 100%;
+/*
+.section3bImg {
+    max-width: 400px;
+    height: auto;
+    width: 200px;
+    height: 150px;
+    border-radius: 0px;
+}
+*/
+.sectionList li {
+    margin: 20px;
+}
+
+/*---------------------------------------------------------------------section4 */
+#section4 {
+    background-image: linear-gradient(to left top, #c1b1a8, #b5a296, #a99384, #9d8573, #907762);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#section4>h2 {
     text-align: center;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 
-@media (max-width: 768px) {
-    main {
+#section4>p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 0px 30px 10px 30px;
+    color: #fff;
+}
+
+#section4box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#section4a,
+#section4b,
+#section4c,
+#section4d {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+    color: #343333;
+
+}
+
+.section4Buttons {
+    background-color: #a08b7a;
+    color: white;
+    padding: 20px 20px;
+    border: 2px;
+    border-radius: 40px;
+}
+
+.section4boxImages {
+    width: 220px;
+    height: 140px;
+    padding: 10px;
+}
+
+#section4dImg {
+    margin-top: 30px;
+}
+
+/*---------------------------------------------------------------------section5*/
+#section5 {
+    background-color: #fff;
+    color: black;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+#section5box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section5box1,
+.section5box2,
+.section5box3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section5boxItem {
+    background-color: #eae2db;
+    padding: 50px;
+    text-align: center;
+    color: #343333;
+    border: 2px;
+    border-radius: 30px;
+}
+
+.section5boxItem:hover{
+    background-color: #3E4A3D;
+    color: white;
+}
+
+.section5box1 h3,
+.section5box2 h3,
+.section5box3 h3 {
+    color: #b6927c;
+}
+
+.section5box1,
+.section5box1h3,
+.section5box2,
+.section5box2h3,
+.section5box3,
+.section5box3h3 {
+    text-align: center;
+    color: #343333;
+}
+
+/*---------------------------------------------------------------------section5*/
+#section6 {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #343333;
+    max-width: 1250px;
+    /*margin: auto;*/
+    padding: 40px 20px;
+    justify-content: center;
+    border-top: 2px solid black;
+}
+
+#section6a {
+    background-color: #EAE2DB;
+    border-radius: 40px;
+    padding: 60px 40px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section6aElements {
+    display: flex;
+    flex-direction: column;
+}
+
+.section6aElements h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.section6aElements p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Formularele – partea dreaptă */
+#section6b {
+    flex: 1;
+    padding: 20px 10px;
+}
+
+#section6b h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+#section6b p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+/* Formular */
+#section6bForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#section6bForm label {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+#section6bForm input,
+#section6bForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+#section6bForm textarea {
+    min-height: 120px;
+}
+
+/* Buton */
+#section6bFormButton {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#section6bFormButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+#stilDeAtasament {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+.intrebare{
+    width: 200px;
+}
+
+/* -----------------------------------------------------------------------section7 VIDEO */
+#section7 {
+    background-color: #74826b;
+    display: flex;
+    flex-direction: column;
+}
+
+#section7a,
+#section7b {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+#section7aVideo1,
+#section7aVideo2,
+#section7aVideo3,
+#section7bVideo1,
+#section7bVideo2,
+#section7bVideo3 {
+    padding: 30px;
+    border: 5px solid #A79890;
+    border-radius: 40px;
+    background-color: white;
+}
+
+
+/* -------------------------------------------------------------- section8 */
+#section8 {
+    margin: 20px;
+    background-color: #3E4A3D;
+    padding: 30px 50px;
+    color: #eae2db;
+}
+
+#section8 h3 {
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+#section8a {
+    border: 2px solid #EAE2DB;
+    padding: 50px;
+}
+
+.controls label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.controls input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#strokeColor,
+#fillColor,
+#colorInput {
+    height: 45px;
+    width: 75px;
+}
+
+#section8aDrawCanvas {
+    background-color: #ffffff;
+    border: 2px solid #EAE2DB;
+    margin-top: 30px;
+
+}
+
+
+/* -----------------------------------------------------------------------section 9 */
+#section9b {
+    padding: 30px;
+    text-align: center;
+}
+
+#section9b h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+#section9bTabelPersoane {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#section9bTabelPersoane td,
+#section9bTabelPersoane th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#section9bTabelPersoane tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#section9bTabelPersoane tr:hover {
+    background-color: #ddd;
+}
+
+#section9bTabelPersoane th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#section9bTabelPersoane td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+/* ------------------------------------------------- section10 */
+#section10{
+        text-align: center;
+        background-color: #ffffff;
+    }
+    
+#section10>h3 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 24px;
+    }
+
+
+#section10input label {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#section10input input{
+    margin:10px;
+}
+
+#section10input #positionInput {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+}
+
+/* Buton */
+#insertRow, #insertColumn {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#insertRow:disabled, #insertColumn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+#section10table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+    margin: 20px auto; /* <-- asta îl centrează */
+}
+
+#section10table td,
+#section10table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#section10table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#section10table tr:hover {
+    background-color: #ddd;
+}
+
+#section10table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#section10table td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+
+
+/* -----------------------------------------------------------------------section10 */
+
+
+#section1,
+#section2,
+#section3,
+#section4,
+#section5,
+#section6,
+#section7,
+#section8 {
+    height: 100%;
+}
+
+/* -----------------------------------------------------------------------section info */
+#browserInfo {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#browserInfo>h3 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+#infoDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.info {
+    background-color: #eae2db;
+    padding: 50px;
+    text-align: center;
+    color: #343333;
+    border: 2px;
+    border-radius: 30px;
+}
+
+/* -----------------------------------------------------------------------footer */
+.footer {
+    background-color: #74826b;
+    text-align: center;
+    padding: 10px;
+    /*margin-top:7px;*/
+    color: white;
+    width: 100%;
+}
+
+/*------------------------------------------------------------------------ alte elemente */
+#formular {
+    background-color: #f5f4f0;
+    padding: 40px;
+    text-align: justify;
+    vertical-align: middle;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formular label {
+    font-size: 16px;
+    margin-bottom: 1px;
+}
+
+#formular input,
+#formular textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 70%;
+    max-width: 600px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+
+#formular textarea {
+    min-height: 120px;
+}
+
+/* Buton */
+#formular button {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+#fieldset1, #fieldset2{
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid #3E4A3D;
+    border-radius: 40px;
+    background-color: #EAE2DB;
+}
+
+.list1,
+.list2 {
+    background-color: #eae2db;
+    padding: 15px;
+    border: 2px;
+    border-radius: 40px;
+
+}
+
+/* ------------------------------------------------ cumparaturi.html -> form*/
+
+#sectionCumparaturi {
+    background-color: #EAE2DB;
+    border-radius: 40px;
+    padding: 60px 40px;
+    margin: 0px 60px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+}
+
+#sectionCumparaturi h3 {
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+#formCumparaturi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#formCumparaturi label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#formCumparaturi input{
+    margin:10px;
+/*width: 350px;*/
+}
+
+#productAmount, #productName {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    /*max-width: 600px;*/
+    background-color: #fafafa;
+}
+
+/* Buton */
+#addProduct {
+    background-color: #74826b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    align-self: center;
+}
+
+#tableCumparaturi {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tableCumparaturi td,
+#tableCumparaturi th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tableCumparaturi tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tableCumparaturi tr:hover {
+    background-color: #ddd;
+}
+
+#tableCumparaturi th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(182, 146, 124);
+    color: white;
+}
+
+#tableCumparaturi td {
+    background-color: #f5f4f0;
+    padding: 20px 15px;
+}
+ 
+/*
+.article {
+    background-color: #e5e5e5;
+    float: left;
+    width: 20%;
+    padding: 15px;
+    margin-top: 7px;
+    text-align: center;
+}
+*/
+
+/* ---------------------------------------------------------- responsive */
+@media only screen and (max-width: 930px) {
+    .navbar{
+        flex-wrap: wrap;
+    }
+    .navbarItem{
+        width: 15%;
+    }
+
+    .navbar a{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .sidebar,
+    .navbar,
+    #headerContinut {
+        width: 100%;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sidebar,
+    .navbar{
+        width: 100%;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 100%;
+    }
+
+    #headerContinut {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #header2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #section1 {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .sidebar {
+    #section1a h2 {
+        font-size: 38px;
+        font-weight: 100;
+        line-height: 48px;
+    }
+
+    #section2b {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        gap: 20px;
+    }
+
+    #section1a,
+    #section1b {
         width: 100%;
         text-align: center;
     }
 
-    .content {
+    #section1bImg,
+    #section2bImg {
+        max-width: 90%;
+        height: auto;
+    }
+
+    #section2bimg {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    #section2btext {
+        margin-left: 0;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    #section3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section3a {
         width: 100%;
     }
+
+    #section3b {
+        margin-top: 0px;
+        gap: 0px;
+    }
+
+    #section4box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section5box1,
+    .section5box2,
+    .section5box3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section6 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #section7 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section7a,
+    #section7b {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section7aVideo1,
+    #section7aVideo2,
+    #section7aVideo3,
+    #section7bVideo1,
+    #section7bVideo2,
+    #section7bVideo3 {
+        margin: auto;
+    }
+
+    #sectionCumparaturi{
+        margin: 0px 0px;
+    }
+
+    #formCumparaturi{
+        flex-direction: column;
+    }
+    
 }
+
+@media screen and (min-width: 768px) {
+    #section5a,
+    #section5b,
+    #section5c {
+        padding: 30px;
+    }
+}
+
