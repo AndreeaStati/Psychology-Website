@@ -89,3 +89,5 @@ function afiseazaProduseDinLocalStorage(){
     const lista = JSON.parse(localStorage.getItem("listaCumparaturi")) || [];
     lista.forEach(prod => adaugaInTabel(prod));
 }
+
+
