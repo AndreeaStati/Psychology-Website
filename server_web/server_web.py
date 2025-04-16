@@ -20,7 +20,10 @@ def handle_client(clientsocket):
 
         linieDeStart = cerere.split('\r\n')[0]
         prima_linie = linieDeStart.split()
-
+        
+        if not prima_linie:
+            print("Cerere incompleta sau goala.")
+            return  
         metoda = prima_linie[0]
 
         if len(prima_linie) > 1:
@@ -38,7 +41,7 @@ def handle_client(clientsocket):
 
         cale_fisier=''
 
-        # Adăugăm verificarea pentru fișierul utilizatori.json
+        # Adaugam verificarea pentru fisierul utilizatori.json
         if resursa == "/resurse/utilizatori.json":
             fisier_utilizatori = os.path.join(director_parinte, "continut", "resurse", "utilizatori.json")
             if os.path.isfile(fisier_utilizatori):
@@ -58,25 +61,25 @@ def handle_client(clientsocket):
                 clientsocket.send(raspuns.encode() + mesaj_eroare)
             return
         
-        # **Adăugare pentru POST /api/utilizatori**
+        # **Adaugare pt POST /api/utilizatori**
         if resursa == "/api/utilizatori" and metoda == "POST":
             # Citim datele trimise de client
             continut_cerere = cerere.split("\r\n\r\n")[1]
             try:
-                utilizator = json.loads(continut_cerere)  # Convertim corpul cererii JSON într-un obiect Python
+                utilizator = json.loads(continut_cerere)  # Convertim corpul cererii JSON intr-un obiect Python
                 print("Datele utilizatorului:", utilizator)
 
-                # Deschidem fișierul de utilizatori
+                # Deschidem fisierul de utilizatori
                 fisier_utilizatori = os.path.join(director_parinte, "continut", "resurse", "utilizatori.json")
                 if os.path.isfile(fisier_utilizatori):
                     with open(fisier_utilizatori, "r") as fisier:
-                        utilizatori_existenti = json.load(fisier)  # Citim utilizatorii existenți
+                        utilizatori_existenti = json.load(fisier)  # Citim utilizatorii existenti
                 else:
-                    utilizatori_existenti = []  # Dacă fișierul nu există, creăm o listă goală
+                    utilizatori_existenti = []  # Daca fisierul nu există, cream o listă goala
                 
-                utilizatori_existenti.append(utilizator)  # Adăugăm utilizatorul nou la lista existentă
+                utilizatori_existenti.append(utilizator)  # Adaugam utilizatorul nou la lista existenta
 
-                # Salvăm utilizatorii într-un fișier
+                # Salvam utilizatorii intr-un fisier
                 with open(fisier_utilizatori, "w") as fisier:
                     json.dump(utilizatori_existenti, fisier, indent=4)
 
@@ -96,9 +99,6 @@ def handle_client(clientsocket):
                 clientsocket.send(raspuns.encode() + mesaj_eroare)
 
             return
-
-        #director_curent = os.path.dirname(os.path.abspath(__file__))
-        #director_parinte = os.path.dirname(director_curent)
 
         if resursa == "/":
              resursa = "/index.html"  # Servim index.html dacă nu se specifică nimic
@@ -143,7 +143,7 @@ def handle_client(clientsocket):
 # Creează un server socket
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversocket.bind(('', 5678))  # Rulează pe portul 5678
-serversocket.listen(5)
+serversocket.listen(5) #poate astepta 5 clienti la coada
 
 while True:
     print('#########################################################################')
