@@ -19,7 +19,7 @@ def handle_client(clientsocket):
         
         print('S-a citit mesajul: \n---------------------------\n' + cerere + '\n---------------------------')
 
-        # Verifică dacă clientul acceptă gzip
+        # detectarea suportului pt gzip
         accept_encoding = ""
         for linie in cerere.split('\r\n'):
             if linie.lower().startswith("accept-encoding:"):
@@ -35,6 +35,7 @@ def handle_client(clientsocket):
             return  
         metoda = prima_linie[0]
 
+        # determinarea resursei
         if len(prima_linie) > 1:
             resursa = prima_linie[1]
         else:
@@ -48,12 +49,14 @@ def handle_client(clientsocket):
 
         print("Resursa cerută:", resursa)
 
+        # GET /resurse/utilizatori.json
         if resursa == "/resurse/utilizatori.json":
             fisier_utilizatori = os.path.join(director_parinte, "continut", "resurse", "utilizatori.json")
             if os.path.isfile(fisier_utilizatori):
                 with open(fisier_utilizatori, "rb") as fisier:
                     continut = fisier.read()
 
+                #compresie gzip
                 if suporta_gzip:
                     buf = io.BytesIO()
                     with gzip.GzipFile(fileobj=buf, mode='wb') as f:
@@ -78,6 +81,7 @@ def handle_client(clientsocket):
                 clientsocket.send(raspuns.encode() + mesaj_eroare)
             return
         
+        #POST /api/utilizatori
         if resursa == "/api/utilizatori" and metoda == "POST":
             continut_cerere = cerere.split("\r\n\r\n", 1)[1]
             try:
@@ -114,15 +118,19 @@ def handle_client(clientsocket):
 
         if resursa == "/":
             resursa = "/index.html"
-        
+
+        # servire fisiere din continut/
         cale_fisier = os.path.join(director_parinte, "continut", resursa[1:])
         print("cale: " + cale_fisier)
 
+        #verificam daca fisierul exista
         if os.path.isfile(cale_fisier):
             with open(cale_fisier, "rb") as fisier:
                 continut = fisier.read()
 
+            #determinam content-type
             extensie = os.path.splitext(cale_fisier)[1].lower()
+            # suport pt json si xml
             if extensie == ".json":
                 tip_mime = "application/json"
             elif extensie == ".xml":
@@ -141,6 +149,7 @@ def handle_client(clientsocket):
             else:
                 content_encoding = ""
 
+            #construirea raspunsului http
             raspuns = "HTTP/1.1 200 OK\r\n"
             raspuns += f"Content-Type: {tip_mime}\r\n"
             raspuns += content_encoding
@@ -148,6 +157,7 @@ def handle_client(clientsocket):
             raspuns += "\r\n"
             clientsocket.send(raspuns.encode() + continut)
         else:
+            #in caz de fisier inexistent
             mesaj_eroare = "<h1>404 Not Found</h1>".encode()
             raspuns = "HTTP/1.1 404 Not Found\r\n"
             raspuns += "Content-Type: text/html\r\n"
@@ -158,7 +168,7 @@ def handle_client(clientsocket):
         clientsocket.close()
         print('S-a terminat comunicarea cu clientul.')
 
-# Creează un server socket
+# creeaza un server socket
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serversocket.bind(('', 5678))
 serversocket.listen(5)
@@ -170,5 +180,6 @@ while True:
     (clientsocket, address) = serversocket.accept()
     print('S-a conectat un client.')
 
+    #threading pt conexiuni multiple 
     client_thread = threading.Thread(target=handle_client, args=(clientsocket,))
     client_thread.start()
