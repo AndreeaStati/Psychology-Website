@@ -12,7 +12,6 @@ This is a psychology-themed website developed as part of the **Web Programming**
 
 - Responsive design
 - Interactive UI (navigation, animations, or forms)
-- Simple backend logic using Python (e.g., basic routing, data handling)
 - Educational content on psychology topics
 
 
