@@ -86,13 +86,13 @@ Am ales această temă deoarece psihologia este un domeniu fascinant și esenți
 1. Clonează repository-ul:
    ```bash
    git clone https://github.com/AndreeaStati/Psychology-Website.git
-```
+  ```
 
 2. Rulează serverul:
    ```bash
     cd server_web
     python server_web.py
-```
+  ```
 
 3. Deschide în browser:
 http://localhost:5678/
